@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\EnemyState.cs" />
      <Compile Include="Assets\Scripts\PlayerAttack.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\Pursuit.cs" />
      <None Include="Assets\Sprites\v1.1 dungeon crawler 16x16 pixel pack\tiles\wall\obs.txt" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/16180510/Documents/roguelike/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5674791422822884902}
   - component: {fileID: 5674791422822884903}
   - component: {fileID: 6356876069854264167}
+  - component: {fileID: 3969042051238346005}
   - component: {fileID: 5674791422822884900}
   m_Layer: 8
   m_Name: Enemy
@@ -29,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5674791422822884901}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.3, y: -1.96, z: -0.05870896}
+  m_LocalPosition: {x: 2.3, y: -1.96, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -143,6 +144,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
+--- !u!114 &3969042051238346005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5674791422822884901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0cdaf7f4f4113747a7aceeed588e7be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  speed: 5
+  alertDistance: 8
+  targetDistance: 2
+  rigidBody: {fileID: 0}
 --- !u!95 &5674791422822884900
 Animator:
   serializedVersion: 3
