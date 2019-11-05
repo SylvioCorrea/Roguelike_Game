@@ -8,25 +8,32 @@ public class PlayerMovement : MonoBehaviour
     bool isWalking;
     Rigidbody2D rigidBody;
 
+    PlayerState playerState;
+    AnimationScript aniscr;
+
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
-        isWalking = false;
+        playerState = GetComponent<PlayerState>();
+        aniscr = GetComponent<AnimationScript>();
     }
 
     void Update()
     {
-        float inputH = Input.GetAxis("Horizontal");
-        float inputV = Input.GetAxis("Vertical");
-        
-        float deltaH = inputH * walkSpeed;
-        float deltaV = inputV * walkSpeed;
-        
-        if(inputH != 0 || inputV != 0) {
-            isWalking = true;
+        if(playerState.flinched==false) {
+            float inputH = Input.GetAxis("Horizontal");
+            float inputV = Input.GetAxis("Vertical");
+            
+            float deltaH = inputH * walkSpeed;
+            float deltaV = inputV * walkSpeed;
+            
+            Vector2 vel = new Vector2(deltaH, deltaV);
+            rigidBody.velocity = vel;
+            if(inputH != 0 || inputV != 0){
+                aniscr.Walk(inputH);
+            } else {
+                aniscr.Iddle();
+            }
         }
-        
-        Vector2 vel = new Vector2(deltaH, deltaV);
-        rigidBody.velocity = vel;
     }
 }

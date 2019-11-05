@@ -5,31 +5,39 @@ using UnityEngine;
 public class AnimationScript : MonoBehaviour
 {
     Animator animator;
-    Transform player;
+    
     void Start() {
         animator = GetComponent<Animator>();
-        player = GetComponent<Transform>();
     }
     
     void Update() {
-        //Debug.Log("!");
-        if(Input.GetAxis("Horizontal")!=0 || Input.GetAxis("Vertical")!=0) {
-            animator.SetBool("isWalking", true);
-        }
-        else {
-            animator.SetBool("isWalking", false);
-        }
+        
+    }
 
-        if(Input.GetAxis("Horizontal")<0 && player.localScale.x > 0) {
-            Vector3 newScale = Vector3.Scale(player.localScale, new Vector3(-1, 1, 1));
-            player.localScale = newScale;
-        } else if(Input.GetAxis("Horizontal")>0 && player.localScale.x < 0) {
-            Vector3 newScale = Vector3.Scale(player.localScale, new Vector3(-1, 1, 1));
-            player.localScale = newScale;
+    public void Flinch()
+    {
+        animator.SetBool("isWalking", false);
+        animator.SetBool("isFlinched", true);
+    }
+
+    public void Unflinch()
+    {
+        animator.SetBool("isFlinched", false);
+    }
+
+    public void Walk(float inputH)
+    {
+        animator.SetBool("isWalking", true);
+        //Flips sprite if needed
+        if(inputH !=0 && Mathf.Sign(inputH) != Mathf.Sign(transform.localScale.x)) {
+            transform.localScale = Vector3.Scale(transform.localScale, new Vector3(-1, 1, 1));
         }
     }
     
-    
+    public void Iddle()
+    {
+        animator.SetBool("isWalking", false);
+    }
     
     
     
