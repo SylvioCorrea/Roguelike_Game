@@ -5,8 +5,9 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     public Transform attackPos;
-    public float attackRange;
-    public LayerMask enemyLayerMask;
+    public float hitboxRadius;
+    public float scalar;
+    public LayerMask enemyLayerMask; //Maybe use a tag instead
     // Start is called before the first frame update
     void Start()
     {
@@ -16,8 +17,15 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Set attack hitbox in place
+        Vector3 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        target.z = 0f;
+        target = target - transform.position;
+        attackPos.position = transform.position + (target.normalized * scalar);
+        
+        //Attack
         if(Input.GetButtonDown("Fire1")) {
-            Collider2D[] enemiesHit = Physics2D.OverlapCircleAll(attackPos.position, attackRange, enemyLayerMask);
+            Collider2D[] enemiesHit = Physics2D.OverlapCircleAll(attackPos.position, hitboxRadius, enemyLayerMask);
             foreach(Collider2D e in enemiesHit) {
                 Debug.Log("enemy hit!!");
                 e.GetComponent<EnemyState>().TakeDamage(10);
@@ -27,6 +35,6 @@ public class PlayerAttack : MonoBehaviour
 
     void OnDrawGizmosSelected() {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(attackPos.position, attackRange);
+        Gizmos.DrawWireSphere(attackPos.position, hitboxRadius);
     }
 }

@@ -29,6 +29,8 @@ public class PlayerMovement : MonoBehaviour
             
             Vector2 vel = new Vector2(deltaH, deltaV);
             rigidBody.velocity = vel;
+            
+            //Move this to the animation script
             if(inputH != 0 || inputV != 0){
                 aniscr.Walk(inputH);
             } else {
