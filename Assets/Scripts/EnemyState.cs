@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemyState : MonoBehaviour
 {
-    public int health;
-    float hurt;
+    public float health;
+    public float hurt;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,10 +27,12 @@ public class EnemyState : MonoBehaviour
 
     }
 
-    public void TakeDamage(int damage) {
+    public void TakeHit(float damage, Vector3 attackerPosition, float forceScalar) {
         health -= damage;
-        Debug.Log("Damage taken");
+        GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+        Vector3 forceVector = transform.position - attackerPosition;
+        GetComponent<Rigidbody2D>().AddForce(forceVector.normalized * forceScalar, ForceMode2D.Impulse);
         GetComponent<SpriteRenderer>().color = Color.red;
-        hurt = 0.5f;
+        hurt = 0.25f;
     }
 }

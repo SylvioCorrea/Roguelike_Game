@@ -6,6 +6,8 @@ public class EnemyAttack : MonoBehaviour
 {
     
     public int targetLayer;
+    public float attackPower;
+    public float attackForce;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +23,7 @@ public class EnemyAttack : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col)
     {
         if(col.gameObject.layer.Equals(targetLayer)) {
-            col.gameObject.GetComponent<PlayerState>().TakeDamage(10);
+            col.gameObject.GetComponent<PlayerState>().TakeHit(attackPower, transform.position, attackForce);
             Debug.Log("Player hit!");
         }
     }

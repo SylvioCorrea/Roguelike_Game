@@ -176,7 +176,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackPos: {fileID: 5932443730962299615}
   hitboxRadius: 1
-  scalar: 0.85
+  distanceScalar: 0.8
+  forceScalar: 2
   enemyLayerMask:
     serializedVersion: 2
     m_Bits: 256

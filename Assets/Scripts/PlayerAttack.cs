@@ -6,7 +6,9 @@ public class PlayerAttack : MonoBehaviour
 {
     public Transform attackPos;
     public float hitboxRadius;
-    public float scalar;
+    public float hitboxDistance; //Hitbox distance from the player
+    public float attackForce; //Impulse caused by attack
+    public float attackPower;
     public LayerMask enemyLayerMask; //Maybe use a tag instead
     // Start is called before the first frame update
     void Start()
@@ -21,14 +23,14 @@ public class PlayerAttack : MonoBehaviour
         Vector3 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         target.z = 0f;
         target = target - transform.position;
-        attackPos.position = transform.position + (target.normalized * scalar);
+        attackPos.position = transform.position + (target.normalized * hitboxDistance);
         
         //Attack
         if(Input.GetButtonDown("Fire1")) {
             Collider2D[] enemiesHit = Physics2D.OverlapCircleAll(attackPos.position, hitboxRadius, enemyLayerMask);
             foreach(Collider2D e in enemiesHit) {
                 Debug.Log("enemy hit!!");
-                e.GetComponent<EnemyState>().TakeDamage(10);
+                e.GetComponent<EnemyState>().TakeHit(attackPower, transform.position, attackForce);
             }
         }
     }
