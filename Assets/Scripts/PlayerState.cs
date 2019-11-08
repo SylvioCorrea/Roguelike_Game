@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class PlayerState : MonoBehaviour
 {
-    public int health;
+    public float health;
     public bool flinched;
     float flinchCooldown;
     public bool invulnerable;
     float invulnerabilityCooldown;
 
     AnimationScript aniscr;
+    Rigidbody2D playerRigidbody;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,7 @@ public class PlayerState : MonoBehaviour
         flinched = false;
         invulnerable = false;
         aniscr = GetComponent<AnimationScript>();
+        playerRigidbody = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -39,14 +41,17 @@ public class PlayerState : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage)
+    public void TakeHit(float attackPower, Vector3 enemyPosition, float attackForce)
     {
         if(!invulnerable) {
-            health -= damage;
+            health -= attackPower;
             flinched = true;
             flinchCooldown = 0.5f;
             invulnerable = true;
             invulnerabilityCooldown = 1f;
+            playerRigidbody.velocity = Vector3.zero;
+            Vector3 forceVector = (transform.position - enemyPosition).normalized * attackForce;
+            playerRigidbody.AddForce(forceVector, ForceMode2D.Impulse);
             aniscr.Flinch();
         }
     }

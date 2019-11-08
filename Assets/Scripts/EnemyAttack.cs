@@ -24,7 +24,19 @@ public class EnemyAttack : MonoBehaviour
     {
         if(col.gameObject.layer.Equals(targetLayer)) {
             col.gameObject.GetComponent<PlayerState>().TakeHit(attackPower, transform.position, attackForce);
-            Debug.Log("Player hit!");
+            //Debug.Log("Player hit!");
         }
     }
+
+    void OnCollisionStay2D(Collision2D col)
+    {
+        if(col.gameObject.layer.Equals(targetLayer)) {
+            col.gameObject.GetComponent<PlayerState>().TakeHit(attackPower, transform.position, attackForce);
+            //Debug.Log("Player hit!");
+        }
+    }
+
+    /* void OnTriggerEnter2D() {
+        Debug.Log("Trigger");
+    } */
 }
