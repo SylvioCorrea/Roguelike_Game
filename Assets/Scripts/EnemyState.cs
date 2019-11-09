@@ -7,5 +7,5 @@ public abstract class EnemyState : MonoBehaviour
     public float health;
     public float hurt;
     
-    public abstract void TakeHit(float damage, Vector3 attackerPosition, float forceScalar);
+    public abstract void TakeHit(AttackInfo aInfo);
 }

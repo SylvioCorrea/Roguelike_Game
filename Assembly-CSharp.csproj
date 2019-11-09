@@ -53,19 +53,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\AnimationScript.cs" />
      <Compile Include="Assets\Scripts\AttackInfo.cs" />
+     <Compile Include="Assets\Scripts\DestroyOnEnter.cs" />
      <Compile Include="Assets\Scripts\Element.cs" />
      <Compile Include="Assets\Scripts\EnemyAttack.cs" />
-     <Compile Include="Assets\Scripts\EnemyPursuit.cs" />
      <Compile Include="Assets\Scripts\EnemyState.cs" />
-     <Compile Include="Assets\Scripts\GoblinState.cs" />
-     <Compile Include="Assets\Scripts\PlayerAttack.cs" />
-     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
-     <Compile Include="Assets\Scripts\PlayerState.cs" />
-     <Compile Include="Assets\Scripts\SlimeHitboxHandler.cs" />
-     <Compile Include="Assets\Scripts\SlimeMovement.cs" />
-     <Compile Include="Assets\Scripts\SlimeState.cs" />
+     <Compile Include="Assets\Scripts\GoblinScripts\GoblinPursuit.cs" />
+     <Compile Include="Assets\Scripts\GoblinScripts\GoblinState.cs" />
+     <Compile Include="Assets\Scripts\PlayerScripts\AnimationScript.cs" />
+     <Compile Include="Assets\Scripts\PlayerScripts\PlayerAttack.cs" />
+     <Compile Include="Assets\Scripts\PlayerScripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\PlayerScripts\PlayerState.cs" />
+     <Compile Include="Assets\Scripts\SlimeScripts\SlimeMovement.cs" />
+     <Compile Include="Assets\Scripts\SlimeScripts\SlimePursuit.cs" />
+     <Compile Include="Assets\Scripts\SlimeScripts\SlimeState.cs" />
      <None Include="Assets\Sprites\v1.1 dungeon crawler 16x16 pixel pack\tiles\wall\obs.txt" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/Sylvio/Documents/CC/Semestre 8/Jogos/Game Prototype/Roguelike_Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
