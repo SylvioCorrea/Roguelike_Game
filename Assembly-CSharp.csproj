@@ -67,6 +67,7 @@
      <Compile Include="Assets\Scripts\SlimeScripts\SlimeMovement.cs" />
      <Compile Include="Assets\Scripts\SlimeScripts\SlimePursuit.cs" />
      <Compile Include="Assets\Scripts\SlimeScripts\SlimeState.cs" />
+     <None Include="Assets\Sprites\Shikashi&apos;s Fantasy Icons Pack\Shikashi&apos;s Fantasy Icons Pack.txt" />
      <None Include="Assets\Sprites\v1.1 dungeon crawler 16x16 pixel pack\tiles\wall\obs.txt" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/Sylvio/Documents/CC/Semestre 8/Jogos/Game Prototype/Roguelike_Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

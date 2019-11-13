@@ -25,6 +25,7 @@ public class SlimeState : EnemyState
     void Start()
     {
         animator = GetComponent<Animator>();
+        health = 100;
     }
 
     // Update is called once per frame
