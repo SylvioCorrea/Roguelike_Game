@@ -6,7 +6,9 @@ public class PlayerAttack : MonoBehaviour
 {
     public Transform attackPos;
     public float hitboxRadius;
-    public float hitboxDistance; //Hitbox distance from the player
+    public float hitboxDistance; //Hitbox center distance from the player
+    public float attackCoolDown;
+    float coolDown;
     
     public float attackPower;
     public float attackForce; //Impulse caused by attack
@@ -17,7 +19,7 @@ public class PlayerAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        coolDown = 0;
     }
 
     // Update is called once per frame
@@ -34,16 +36,23 @@ public class PlayerAttack : MonoBehaviour
         attackPos.position = transform.position + (target * hitboxDistance);
         
         //Attack
-        if(Input.GetButtonDown("Fire1")) {
-            Collider2D[] enemiesHit = Physics2D.OverlapCircleAll(attackPos.position, hitboxRadius, enemyLayerMask);
-            AttackInfo aInfo = new AttackInfo(attackPower, Vector3.zero, element);
-            foreach(Collider2D e in enemiesHit) {
-                //forceVector is different for each enemy hit
-                aInfo.forceVector = (e.gameObject.transform.position - transform.position).normalized * attackForce;
-                e.GetComponent<EnemyState>().TakeHit(aInfo);
-            }
-            
-            GameObject slash = Instantiate(slashEffectPrefab, attackPos.position, Quaternion.FromToRotation(Vector3.right, target));
+        if(coolDown > 0) {
+            coolDown -= Time.deltaTime;
+
+        }else if(Input.GetButtonDown("Fire1")) {
+                Collider2D[] enemiesHit = Physics2D.OverlapCircleAll(attackPos.position, hitboxRadius, enemyLayerMask);
+                AttackInfo aInfo = new AttackInfo(attackPower, Vector3.zero, element);
+                foreach(Collider2D e in enemiesHit) {
+                    //forceVector is different for each enemy hit
+                    aInfo.forceVector = (e.gameObject.transform.position - transform.position).normalized * attackForce;
+                    e.GetComponent<EnemyState>().TakeHit(aInfo);
+                }
+                //Instantiate slash effect
+                
+                GameObject slash = Instantiate(slashEffectPrefab, attackPos.position, Quaternion.FromToRotation(Vector3.right, target));
+                slash.transform.localScale *= hitboxRadius;
+
+                coolDown = attackCoolDown;
         }
     }
 

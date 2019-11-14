@@ -54,12 +54,16 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\AttackInfo.cs" />
+     <Compile Include="Assets\Scripts\CameraScript.cs" />
+     <Compile Include="Assets\Scripts\ChestScript.cs" />
      <Compile Include="Assets\Scripts\DestroyOnEnter.cs" />
      <Compile Include="Assets\Scripts\Element.cs" />
      <Compile Include="Assets\Scripts\EnemyAttack.cs" />
      <Compile Include="Assets\Scripts\EnemyState.cs" />
      <Compile Include="Assets\Scripts\GoblinScripts\GoblinPursuit.cs" />
      <Compile Include="Assets\Scripts\GoblinScripts\GoblinState.cs" />
+     <Compile Include="Assets\Scripts\Item.cs" />
+     <Compile Include="Assets\Scripts\LootScript.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\AnimationScript.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\PlayerAttack.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\PlayerMovement.cs" />
@@ -67,6 +71,7 @@
      <Compile Include="Assets\Scripts\SlimeScripts\SlimeMovement.cs" />
      <Compile Include="Assets\Scripts\SlimeScripts\SlimePursuit.cs" />
      <Compile Include="Assets\Scripts\SlimeScripts\SlimeState.cs" />
+     <Compile Include="Assets\Scripts\Weapon.cs" />
      <None Include="Assets\Sprites\Shikashi&apos;s Fantasy Icons Pack\Shikashi&apos;s Fantasy Icons Pack.txt" />
      <None Include="Assets\Sprites\v1.1 dungeon crawler 16x16 pixel pack\tiles\wall\obs.txt" />
  <Reference Include="Unity.TextMeshPro.Editor">
