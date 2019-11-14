@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class PlayerState : MonoBehaviour
 {
+    public float maxHealth;
     public float health;
     public bool flinched;
     float flinchCooldown;
+    public bool poisoned;
     public bool invulnerable;
     float invulnerabilityCooldown;
 
@@ -17,7 +19,7 @@ public class PlayerState : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        health = 100;
+        health = maxHealth;
         flinched = false;
         invulnerable = false;
         aniscr = GetComponent<AnimationScript>();
@@ -42,6 +44,10 @@ public class PlayerState : MonoBehaviour
                 invulnerable = false;
             }
         }
+
+        if(poisoned) {
+            health -= maxHealth/20;
+        }
     }
 
     public void TakeHit(AttackInfo aInfo)
@@ -56,6 +62,11 @@ public class PlayerState : MonoBehaviour
             playerRigidbody.AddForce(aInfo.forceVector, ForceMode2D.Impulse);
             aniscr.Flinch();
         }
+    }
+
+    public IEnumerator Poison() {
+        //TODO
+        yield return new WaitForSeconds(3);
     }
 
     public void EquipWeapon(Weapon w) {

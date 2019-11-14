@@ -260,6 +260,7 @@ MonoBehaviour:
   health: 0
   flinched: 0
   invulnerable: 0
+  playerAttackScript: {fileID: 0}
 --- !u!114 &1321461414651743881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,10 +288,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackPos: {fileID: 5932443730962299615}
   hitboxRadius: 1
-  radiusWeaponModifier: 1
   hitboxDistance: 0.8
+  attackCoolDown: 0.3
   attackPower: 10
-  attackForce: 8
+  attackForce: 5
   element: 0
   enemyLayerMask:
     serializedVersion: 2
