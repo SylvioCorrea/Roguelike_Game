@@ -6,6 +6,8 @@ using UnityEngine;
 public class Weapon : ScriptableObject {
     public float attackPower;
     public float attackForce;
+    public float attackCoolDown;
+    public float attackRadius;
     public Element element;
     public Sprite sprite;
 }

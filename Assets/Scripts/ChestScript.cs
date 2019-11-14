@@ -26,10 +26,10 @@ public class ChestScript : MonoBehaviour
             //Release all loot
             int n = 1;
             foreach(Weapon item in contents) {
-                Transform loot = Instantiate(lootEmpty, transform.position, Quaternion.identity);
+                Vector3 forceVector = Quaternion.Euler(0 , 0, n*80) * Vector3.right;
+                Transform loot = Instantiate(lootEmpty, transform.position+forceVector*0.5f, Quaternion.identity);
                 loot.GetComponent<LootScript>().SetItem(item);
-                Vector3 forceVector = 5 * (Quaternion.Euler(0 , 0, n*80) * Vector3.right);
-                loot.GetComponent<Rigidbody2D>().AddForce(forceVector, ForceMode2D.Impulse);
+                loot.GetComponent<Rigidbody2D>().AddForce(forceVector*5, ForceMode2D.Impulse);
                 n++;
                 Debug.Log(forceVector);
             }

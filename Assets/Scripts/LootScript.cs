@@ -10,11 +10,11 @@ public class LootScript : MonoBehaviour
 
     public Texture2D cursorTexture;
     public CursorMode cursorMode = CursorMode.Auto;
-    Vector2 hotSpot = new Vector2(0.5f , 0.5f);
+    Vector2 hotSpot;
     // Start is called before the first frame update
     void Start()
     {
-        
+        hotSpot = new Vector2(cursorTexture.width/2, cursorTexture.height/2);
     }
 
     // Update is called once per frame
@@ -44,6 +44,8 @@ public class LootScript : MonoBehaviour
 
     public void OnMouseDown()
     {
+        Cursor.SetCursor(null, Vector2.zero, cursorMode);
+        GameObject.FindWithTag("Player").GetComponent<PlayerState>().EquipWeapon(weapon);
         Destroy(gameObject);
     }
 }

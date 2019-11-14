@@ -14,5 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackPower: 30
   attackForce: 10
+  attackCoolDown: 0.3
+  attackRadius: 1.2
   element: 0
   sprite: {fileID: 21300000, guid: b346ce4da13ef464e906ddc3358a555b, type: 3}

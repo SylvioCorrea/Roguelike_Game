@@ -12,6 +12,8 @@ public class PlayerState : MonoBehaviour
 
     AnimationScript aniscr;
     Rigidbody2D playerRigidbody;
+
+    public PlayerAttack playerAttackScript;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,7 @@ public class PlayerState : MonoBehaviour
         invulnerable = false;
         aniscr = GetComponent<AnimationScript>();
         playerRigidbody = GetComponent<Rigidbody2D>();
+        playerAttackScript = GetComponent<PlayerAttack>();
     }
 
     // Update is called once per frame
@@ -53,5 +56,13 @@ public class PlayerState : MonoBehaviour
             playerRigidbody.AddForce(aInfo.forceVector, ForceMode2D.Impulse);
             aniscr.Flinch();
         }
+    }
+
+    public void EquipWeapon(Weapon w) {
+        playerAttackScript.attackPower = w.attackPower;
+        playerAttackScript.attackForce = w.attackForce;
+        playerAttackScript.attackCoolDown = w.attackCoolDown;
+        playerAttackScript.hitboxRadius = w.attackRadius;
+        playerAttackScript.element = w.element;
     }
 }
