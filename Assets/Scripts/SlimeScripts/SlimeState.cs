@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class SlimeState : EnemyState
 {
@@ -56,7 +57,7 @@ public class SlimeState : EnemyState
 
     public override void TakeHit(AttackInfo aInfo)
     {
-        health -= aInfo.attackPower;
+        TakeDamage(aInfo.attackPower);
         if(health<=0) {
             Destroy(gameObject);
         }

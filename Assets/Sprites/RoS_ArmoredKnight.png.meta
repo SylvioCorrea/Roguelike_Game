@@ -1,0 +1,1527 @@
+fileFormatVersion: 2
+guid: 71997208f46a1234f833ba7f0191f47f
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: RoS_ArmoredKnight_0
+    21300002: RoS_ArmoredKnight_1
+    21300004: RoS_ArmoredKnight_2
+    21300006: RoS_ArmoredKnight_3
+    21300008: RoS_ArmoredKnight_4
+    21300010: RoS_ArmoredKnight_5
+    21300012: RoS_ArmoredKnight_6
+    21300014: RoS_ArmoredKnight_7
+    21300016: RoS_ArmoredKnight_8
+    21300018: RoS_ArmoredKnight_9
+    21300020: RoS_ArmoredKnight_10
+    21300022: RoS_ArmoredKnight_11
+    21300024: RoS_ArmoredKnight_12
+    21300026: RoS_ArmoredKnight_13
+    21300028: RoS_ArmoredKnight_14
+    21300030: RoS_ArmoredKnight_15
+    21300032: RoS_ArmoredKnight_16
+    21300034: RoS_ArmoredKnight_17
+    21300036: RoS_ArmoredKnight_18
+    21300038: RoS_ArmoredKnight_19
+    21300040: RoS_ArmoredKnight_20
+    21300042: RoS_ArmoredKnight_21
+    21300044: RoS_ArmoredKnight_22
+    21300046: RoS_ArmoredKnight_23
+    21300048: RoS_ArmoredKnight_24
+    21300050: RoS_ArmoredKnight_25
+    21300052: RoS_ArmoredKnight_26
+    21300054: RoS_ArmoredKnight_27
+    21300056: RoS_ArmoredKnight_28
+    21300058: RoS_ArmoredKnight_29
+    21300060: RoS_ArmoredKnight_30
+    21300062: RoS_ArmoredKnight_31
+    21300064: RoS_ArmoredKnight_32
+    21300066: RoS_ArmoredKnight_33
+    21300068: RoS_ArmoredKnight_34
+    21300070: RoS_ArmoredKnight_35
+    21300072: RoS_ArmoredKnight_36
+    21300074: RoS_ArmoredKnight_37
+    21300076: RoS_ArmoredKnight_38
+    21300078: RoS_ArmoredKnight_39
+    21300080: RoS_ArmoredKnight_40
+    21300082: RoS_ArmoredKnight_41
+    21300084: RoS_ArmoredKnight_42
+    21300086: RoS_ArmoredKnight_43
+    21300088: RoS_ArmoredKnight_44
+    21300090: RoS_ArmoredKnight_45
+    21300092: RoS_ArmoredKnight_46
+    21300094: RoS_ArmoredKnight_47
+    21300096: RoS_ArmoredKnight_48
+    21300098: RoS_ArmoredKnight_49
+    21300100: RoS_ArmoredKnight_50
+    21300102: RoS_ArmoredKnight_51
+    21300104: RoS_ArmoredKnight_52
+    21300106: RoS_ArmoredKnight_53
+    21300108: RoS_ArmoredKnight_54
+    21300110: RoS_ArmoredKnight_55
+    21300112: RoS_ArmoredKnight_56
+    21300114: RoS_ArmoredKnight_57
+    21300116: RoS_ArmoredKnight_58
+    21300118: RoS_ArmoredKnight_59
+    21300120: RoS_ArmoredKnight_60
+    21300122: RoS_ArmoredKnight_61
+    21300124: RoS_ArmoredKnight_62
+    21300126: RoS_ArmoredKnight_63
+    21300128: RoS_ArmoredKnight_64
+    21300130: RoS_ArmoredKnight_65
+    21300132: RoS_ArmoredKnight_66
+    21300134: RoS_ArmoredKnight_67
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 443
+        width: 38
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6201a34bc93454945a29dbc0f8bbbfb7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_1
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 443
+        width: 38
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2463251ae8935a4c8ae64a3d134baa8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_2
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 443
+        width: 38
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92e72a7359d120a4bb6ed0a4315ef363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_3
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 443
+        width: 38
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4eaa21cc8cabd84aaf5992d60d6cec1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_4
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 443
+        width: 38
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96e23e612a1e2e64394867cc6de7137b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_5
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 443
+        width: 47
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2724b72fbc0c56640a7d594d4792df03
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_6
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 443
+        width: 50
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 656199f039d5ffc4ab8e3cbf724dbbc4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_7
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 443
+        width: 49
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d61d7df5fb8e8fb459f2b0a6cb30e95e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_8
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 468
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8e2cd2a1b841dd4fa8c4c1ab4e79a89
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_9
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 468
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e368f003a46dd44ca8354a2e635a46c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_10
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 468
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 013261325d1a5194f85b3137e8828fe6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_11
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 468
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3786eb4512261584caf2bdae36685c52
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_12
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 347
+        width: 104
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c16db710ea28fbc4b814a5eddea16ee1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_13
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 432
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8a33333e48073c41be229e53af79f6b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_14
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 432
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a050502f3dab4b24489bbd7c986470f7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_15
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 432
+        width: 16
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37d98803371f92d4cb0e50db62e6f006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_16
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 362
+        width: 48
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a447f1f42d781f240b482a8977cdaa12
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_17
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 362
+        width: 44
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da8959d71abeb8b459e8fdcbbfce7ab4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_18
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 346
+        width: 57
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3e36cd51ee2409419f38dcf608dac43
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_19
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 346
+        width: 52
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb95f060409dae7489358c298f4bfeb6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_20
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 353
+        width: 55
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 360f57cea834fbe4e8685628b59acffa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_21
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 395
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94879cb19911d4e4f8463f51a109865f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_22
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 395
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7047864773dd9bc48b3b3fd166ac2b81
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_23
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 395
+        width: 24
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9edf93433a724a244a16f1944a4fb8c5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_24
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 381
+        width: 31
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96cfda524d2540349b8c9985f263ea15
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_25
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 381
+        width: 23
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 902019bbf7e4c9445bdb02138a080ae4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_26
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 366
+        width: 25
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 792dc0e7fb25b8640a4a0b2fce37095f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_27
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 366
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dcaa4354afb3094bb1e595d0cdab837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_28
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 366
+        width: 31
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56048a9072ca648489e970af9159712e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_29
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 366
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 205b1e788fa70a6458b21b95f768dd84
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_30
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 353
+        width: 20
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee11668a69d39a0408610c7a44ab2f49
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_31
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 353
+        width: 19
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbb4bb86b0be04443a154c912623fe8e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_32
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 351
+        width: 23
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82d7f5e5c8ffc7141ae09163b4392c46
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_33
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 351
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48f84747661fc904dbb355e202427b5f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_34
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 351
+        width: 17
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48e177ce27bbdb743b056ac9607963db
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_35
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 269
+        width: 41
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daa7b8409fd92d3419d4b12c02cbfad6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_36
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 336
+        width: 23
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d3706aeaed98d14ea2b3d04449de6ca
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_37
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 336
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d84a7299c020e144bbea31ffe84ca265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_38
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 336
+        width: 69
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ed6a83bcde993648a5dd02e6f52214a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_39
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 268
+        width: 40
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7ee5ce1459799e4fb4a9753916b39eb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_40
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 272
+        width: 40
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f697781b278dbee47ae61e7d2f585636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_41
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 268
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac9e0c2a603a3be449052a32103979fb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_42
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 272
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f23a8713ce81dc0418e3e1bf9750ec9f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_43
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 272
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd6752c135354d74d8e97bb1c825286c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_44
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 272
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65babdc25dcf867458bd3220d3da9bcb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_45
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 272
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc4ae5157b219e84d841752494ff2eb9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_46
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 268
+        width: 27
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67940e6ba4b0e934b84e7fea648c2a60
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_47
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 182
+        width: 39
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc3e542aebfc18b438c0956a514d3ce8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_48
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 182
+        width: 39
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8ad237c88f32d14d81fccab2b86b63a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_49
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 182
+        width: 39
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8cd55fdf3c0a744bbc5a687d97fb448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_50
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 182
+        width: 39
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb90e0e8a66662f4f935fb39606c2190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_51
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 182
+        width: 51
+        height: 65
+      alignment: 9
+      pivot: {x: 0.59, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dcb7c43220f9c34092020191b365d99
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_52
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 182
+        width: 54
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ecd8683e2bb8df4293f4885a994946e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_53
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 182
+        width: 60
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c6ff498965778a47b69d2aa872cb47e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_54
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 182
+        width: 59
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa77ed7c17ac6f548a96013d6a92bbe0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_55
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 101
+        width: 54
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 640319b098fca1c4588bb40d488f6e7c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_56
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 101
+        width: 52
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40cd3107aef99cc449db06aa772aed14
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_57
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 89
+        width: 108
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 919b554ad2fe6084ebe9242151a2e774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_58
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 78
+        width: 69
+        height: 68
+      alignment: 9
+      pivot: {x: 0.72979647, y: 0.81333876}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c83baf0db6c1fc44902ac1434518825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_59
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 90
+        width: 62
+        height: 54
+      alignment: 9
+      pivot: {x: 0.70294684, y: 0.81873435}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad21bdcc2b4e4ef468319b47034e2086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_60
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 90
+        width: 64
+        height: 54
+      alignment: 9
+      pivot: {x: 0.67883015, y: 0.82250214}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6793e3a5e655b7a4b9521cc8da1de268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_61
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 92
+        width: 20
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecad91d0427c9274ea68a34731fdf76b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_62
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 92
+        width: 19
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a72a3434aed50824c9fbf979bff26e72
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_63
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 8
+        width: 51
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd6ddacedafbcef46b13005b9545234a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_64
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 7
+        width: 46
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b92aa31c3e9e4f84b9c85f7a007d55e5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_65
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 11
+        width: 50
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6673e2efa75585a4a9747b82ff68c0b5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_66
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 7
+        width: 69
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4da1e23c6cd7774db2b9b19b0ef0752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoS_ArmoredKnight_67
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 7
+        width: 27
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89ec835738f3db445a64615ebe2a0795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5ea4b54cedb35354caa9b8d913e72bfa
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

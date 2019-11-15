@@ -173,6 +173,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 80
   hurt: 0
+  damageNumbersPrefab: {fileID: 8142926907962709068, guid: dfc23ebdb0f487240922ce1ed269c550,
+    type: 3}
 --- !u!114 &2731509922882118511
 MonoBehaviour:
   m_ObjectHideFlags: 0

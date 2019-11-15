@@ -25,8 +25,8 @@ public class EnemyAttack : MonoBehaviour
     {
         if(col.gameObject.layer.Equals(targetLayer))
         {
-            Vector3 forceVector = col.gameObject.transform.position - transform.position;
-            AttackInfo aInfo = new AttackInfo(attackPower, forceVector*attackForce, element);
+            Vector3 forceVector = (col.gameObject.transform.position - transform.position).normalized * attackForce;
+            AttackInfo aInfo = new AttackInfo(attackPower, forceVector, element);
             col.gameObject.GetComponent<PlayerState>().TakeHit(aInfo);
             //col.gameObject.GetComponent<PlayerState>().TakeHit(attackPower, transform.position, attackForce);
             //Debug.Log("Player hit!");

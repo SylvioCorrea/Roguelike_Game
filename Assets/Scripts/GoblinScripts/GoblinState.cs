@@ -25,7 +25,7 @@ public class GoblinState : EnemyState
     }
 
     public override void TakeHit(AttackInfo aInfo) {
-        health -= aInfo.attackPower;
+        TakeDamage(aInfo.attackPower);
         GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         GetComponent<Rigidbody2D>().AddForce(aInfo.forceVector, ForceMode2D.Impulse);
         GetComponent<SpriteRenderer>().color = Color.red;

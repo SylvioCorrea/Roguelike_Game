@@ -9,12 +9,14 @@ public class PlayerState : MonoBehaviour
     public bool flinched;
     float flinchCooldown;
     public bool poisoned;
+
+    public float poisonTickTimer;
     public bool invulnerable;
     float invulnerabilityCooldown;
 
     AnimationScript aniscr;
     Rigidbody2D playerRigidbody;
-
+    SpriteRenderer spriteRenderer;
     public PlayerAttack playerAttackScript;
     // Start is called before the first frame update
     void Start()
@@ -25,12 +27,13 @@ public class PlayerState : MonoBehaviour
         aniscr = GetComponent<AnimationScript>();
         playerRigidbody = GetComponent<Rigidbody2D>();
         playerAttackScript = GetComponent<PlayerAttack>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(flinched == true) {
+        if(flinched) {
             flinchCooldown -= Time.deltaTime;
             if(flinchCooldown <= 0) {
                 flinched = false;
@@ -38,7 +41,7 @@ public class PlayerState : MonoBehaviour
             }
         }
 
-        if(invulnerable == true) {
+        if(invulnerable) {
             invulnerabilityCooldown -= Time.deltaTime;
             if(invulnerabilityCooldown <= 0) {
                 invulnerable = false;
@@ -46,7 +49,12 @@ public class PlayerState : MonoBehaviour
         }
 
         if(poisoned) {
-            health -= maxHealth/20;
+            if(poisonTickTimer <= 0) {
+                health -= maxHealth/20;
+                poisonTickTimer = 0.5f;
+            } else {
+                poisonTickTimer -= Time.deltaTime;
+            }
         }
     }
 
@@ -61,12 +69,20 @@ public class PlayerState : MonoBehaviour
             playerRigidbody.velocity = Vector3.zero;
             playerRigidbody.AddForce(aInfo.forceVector, ForceMode2D.Impulse);
             aniscr.Flinch();
+            if(aInfo.element == Element.POISON) {
+                StartCoroutine(Poison());
+            }
         }
     }
 
     public IEnumerator Poison() {
-        //TODO
+        poisoned = true;
+        spriteRenderer.color = new Color32(0x9C, 0xB5, 0x50, 0xFF);
+        Debug.Log("poisoned");
         yield return new WaitForSeconds(3);
+        poisoned = false;
+        spriteRenderer.color = Color.white;
+        Debug.Log("unpoisoned");
     }
 
     public void EquipWeapon(Weapon w) {

@@ -45,3 +45,6 @@ TagManager:
   - name: Sprites
     uniqueID: 1331534575
     locked: 0
+  - name: DamageNumbers
+    uniqueID: 209224795
+    locked: 0

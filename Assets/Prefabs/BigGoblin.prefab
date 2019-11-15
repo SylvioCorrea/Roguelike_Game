@@ -122,6 +122,12 @@ PrefabInstance:
       propertyPath: health
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 5128577392221997549, guid: de09de823c0798e4a8cd94bd1c78ae0d,
+        type: 3}
+      propertyPath: damageNumbersPrefab
+      value: 
+      objectReference: {fileID: 8142926907962709068, guid: dfc23ebdb0f487240922ce1ed269c550,
+        type: 3}
     - target: {fileID: 4829643109584542811, guid: de09de823c0798e4a8cd94bd1c78ae0d,
         type: 3}
       propertyPath: attackPower

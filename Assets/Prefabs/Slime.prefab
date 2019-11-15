@@ -146,6 +146,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   hurt: 0
+  damageNumbersPrefab: {fileID: 8142926907962709068, guid: dfc23ebdb0f487240922ce1ed269c550,
+    type: 3}
   dividing: 0
   timeToDivide: 0
   divideRangeBegin: 3
