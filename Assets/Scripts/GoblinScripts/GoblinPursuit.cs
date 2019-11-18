@@ -10,12 +10,12 @@ public class GoblinPursuit : MonoBehaviour
     public float targetDistance;
     public Rigidbody2D rigidBody;
     Animator animator;
-    EnemyState state;
+    EnemyCoreScript state;
     // Start is called before the first frame update
     void Start()
     {
         target = GameObject.FindWithTag("Player").transform;
-        state = GetComponent<EnemyState>();
+        state = GetComponent<EnemyCoreScript>();
         rigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }

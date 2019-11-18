@@ -39,13 +39,13 @@ public class PlayerAttack : MonoBehaviour
         if(coolDown > 0) {
             coolDown -= Time.deltaTime;
 
-        }else if(Input.GetButtonDown("Fire1")) {
+        } else if(Input.GetButtonDown("Fire1")) {
                 Collider2D[] enemiesHit = Physics2D.OverlapCircleAll(attackPos.position, hitboxRadius, enemyLayerMask);
                 AttackInfo aInfo = new AttackInfo(attackPower, Vector3.zero, element);
                 foreach(Collider2D e in enemiesHit) {
                     //forceVector is different for each enemy hit
                     aInfo.forceVector = (e.gameObject.transform.position - transform.position).normalized * attackForce;
-                    e.GetComponent<EnemyState>().TakeHit(aInfo);
+                    e.GetComponent<EnemyCoreScript>().TakeHit(aInfo);
                 }
                 //Instantiate slash effect
                 

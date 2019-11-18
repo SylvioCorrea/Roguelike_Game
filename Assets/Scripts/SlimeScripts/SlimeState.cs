@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class SlimeState : EnemyState
+public class SlimeState : EnemyCoreScript
 {
     
     /*
-    Inherited variables from EnemyState:
+    Inherited variables from EnemyCoreScript:
     public float health;
     public float hurt;
     */
@@ -26,7 +26,7 @@ public class SlimeState : EnemyState
     void Start()
     {
         animator = GetComponent<Animator>();
-        health = 100;
+        health = healthMax;
     }
 
     // Update is called once per frame

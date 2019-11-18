@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GoblinState : EnemyState
+public class GoblinState : EnemyCoreScript
 {
+    
     // Start is called before the first frame update
     void Start()
     {

@@ -122,6 +122,7 @@ GameObject:
   - component: {fileID: 1321461414651743894}
   - component: {fileID: 1321461414651743895}
   - component: {fileID: 1321461414651743880}
+  - component: {fileID: 2217199850524764334}
   - component: {fileID: 362103539165672196}
   - component: {fileID: 1321461414651743881}
   - component: {fileID: 5961902403555998355}
@@ -226,7 +227,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1321461414651743882}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -245,6 +246,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.67312586, y: 1.0386322}
   m_EdgeRadius: 0
+--- !u!70 &2217199850524764334
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1321461414651743882}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.36351556}
+  m_Size: {x: 0.7688067, y: 1.065245}
+  m_Direction: 0
 --- !u!114 &362103539165672196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,8 +274,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ed815c6c8c83cd4386311c870bc722f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 0
   health: 0
   flinched: 0
+  poisoned: 0
+  poisonTickTimer: 0
   invulnerable: 0
   playerAttackScript: {fileID: 0}
 --- !u!114 &1321461414651743881

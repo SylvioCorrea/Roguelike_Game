@@ -55,12 +55,15 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\AttackInfo.cs" />
      <Compile Include="Assets\Scripts\CameraScript.cs" />
+     <Compile Include="Assets\Scripts\ChangeTileTrigger.cs" />
      <Compile Include="Assets\Scripts\ChestScript.cs" />
      <Compile Include="Assets\Scripts\DamageNumbersScript.cs" />
      <Compile Include="Assets\Scripts\DestroyOnEnter.cs" />
      <Compile Include="Assets\Scripts\Element.cs" />
      <Compile Include="Assets\Scripts\EnemyAttack.cs" />
-     <Compile Include="Assets\Scripts\EnemyState.cs" />
+     <Compile Include="Assets\Scripts\EnemyCoreScript.cs" />
+     <Compile Include="Assets\Scripts\EnemyStateEnum.cs" />
+     <Compile Include="Assets\Scripts\GoblinScripts\GoblinMovement.cs" />
      <Compile Include="Assets\Scripts\GoblinScripts\GoblinPursuit.cs" />
      <Compile Include="Assets\Scripts\GoblinScripts\GoblinState.cs" />
      <Compile Include="Assets\Scripts\HammerKnight\HammerKnightAttack.cs" />

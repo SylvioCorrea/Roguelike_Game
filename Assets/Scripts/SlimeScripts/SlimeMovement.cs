@@ -10,7 +10,7 @@ public class SlimeMovement : MonoBehaviour
     public float targetDistance;
     public Rigidbody2D rigidBody;
     Animator animator;
-    EnemyState state;
+    EnemyCoreScript state;
     // Start is called before the first frame update
     void Start()
     {

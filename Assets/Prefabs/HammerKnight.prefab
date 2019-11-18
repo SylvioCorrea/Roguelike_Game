@@ -11,12 +11,12 @@ GameObject:
   - component: {fileID: 4028890118997950862}
   - component: {fileID: 4028890118997950857}
   - component: {fileID: 4028890118997950860}
-  - component: {fileID: 4028890118997950863}
   - component: {fileID: 6654584326909742271}
   - component: {fileID: 3093632525657020732}
+  - component: {fileID: 6138420324718604679}
   - component: {fileID: 4028890118997950856}
   - component: {fileID: 7913830343965077358}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HammerKnight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,32 +107,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &4028890118997950863
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4028890118997950859}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.09680432, y: -0.8131573}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.4375, y: 4.3125}
-    newSize: {x: 2.4375, y: 4.3125}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.5559849, y: 2.6861854}
-  m_EdgeRadius: 0
 --- !u!114 &6654584326909742271
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,9 +119,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81cc0763c8e4cf74892a0c5e884f7a1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthMax: 160
   health: 160
   hurt: 0
-  damageNumbersPrefab: {fileID: 0}
+  damageNumbersPrefab: {fileID: 8142926907962709068, guid: dfc23ebdb0f487240922ce1ed269c550,
+    type: 3}
 --- !u!114 &3093632525657020732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,6 +143,22 @@ MonoBehaviour:
   alertDistance: 10
   targetDistance: 2.5
   attackCoolDownPreset: 2.5
+--- !u!114 &6138420324718604679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4028890118997950859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a57b9579c0fce0b4eaef2bddb6d12ee9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetLayer: 0
+  attackPower: 15
+  attackForce: 8
+  element: 0
 --- !u!95 &4028890118997950856
 Animator:
   serializedVersion: 3
@@ -278,3 +270,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 649b66ed6b627c142a25a40084eecfbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackPower: 30
+  attackForce: 30
+  element: 0

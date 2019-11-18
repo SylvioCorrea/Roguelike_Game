@@ -12,11 +12,12 @@ GameObject:
   - component: {fileID: 5674791422822884905}
   - component: {fileID: 5674791422822884902}
   - component: {fileID: 5674791422822884903}
-  - component: {fileID: 6828555520817186629}
+  - component: {fileID: 4915200806774171233}
   - component: {fileID: 5128577392221997549}
   - component: {fileID: 2731509922882118511}
   - component: {fileID: 4829643109584542811}
   - component: {fileID: 5674791422822884900}
+  - component: {fileID: 3354962395756747218}
   m_Layer: 8
   m_Name: Goblin
   m_TagString: Untagged
@@ -114,7 +115,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5674791422822884901}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -133,32 +134,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.59674835, y: 0.6223263}
   m_EdgeRadius: 0
---- !u!61 &6828555520817186629
-BoxCollider2D:
+--- !u!58 &4915200806774171233
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5674791422822884901}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0.029244363, y: -0.012185127}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Radius: 0.2977154
 --- !u!114 &5128577392221997549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,8 +162,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5abcaab9a0ae1854fbaee0b20fa80232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthMax: 80
   health: 80
   hurt: 0
+  state: 0
   damageNumbersPrefab: {fileID: 8142926907962709068, guid: dfc23ebdb0f487240922ce1ed269c550,
     type: 3}
 --- !u!114 &2731509922882118511
@@ -182,7 +175,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5674791422822884901}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4acf2d0ec3802eb4f9298389b5ce6dc1, type: 3}
   m_Name: 
@@ -227,3 +220,26 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3354962395756747218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5674791422822884901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6a6433a9996d0e4ebb413679baa552d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  idleWaitTime: 2
+  idleTimer: 0
+  pursuitSpeed: 5
+  patrolSpeed: 2
+  patrolPoints: []
+  currentPatrolPointIndex: 0
+  reachedEndOfPatrolPath: 0
+  alertDistance: 8
+  targetDistance: 0.5
+  rigidBody: {fileID: 0}

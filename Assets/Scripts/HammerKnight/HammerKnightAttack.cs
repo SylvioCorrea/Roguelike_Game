@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class HammerKnightAttack : MonoBehaviour
 {
+    public float attackPower;
+    public float attackForce;
+    public Element element;
+    
     public void OnTriggerEnter2D(Collider2D col)
     {
         if(col.CompareTag("Player")) {
-            Debug.Log("hammered");
+            Vector3 forceVector = (col.transform.position - transform.position).normalized * attackForce;
+            AttackInfo aInfo = new AttackInfo(attackPower, forceVector, element);
+            col.GetComponent<PlayerState>().TakeHit(aInfo);
         }
     }
 
@@ -15,7 +21,9 @@ public class HammerKnightAttack : MonoBehaviour
     public void OnTriggerStay2D(Collider2D col)
     {
         if(col.CompareTag("Player")) {
-            Debug.Log("hammered");
+            Vector3 forceVector = (col.transform.position - transform.position).normalized * attackForce;
+            AttackInfo aInfo = new AttackInfo(attackPower, forceVector, element);
+            col.GetComponent<PlayerState>().TakeHit(aInfo);
         }
     }
 }

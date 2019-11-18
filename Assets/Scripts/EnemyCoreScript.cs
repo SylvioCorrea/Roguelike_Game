@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public abstract class EnemyState : MonoBehaviour
+public abstract class EnemyCoreScript : MonoBehaviour
 {
+    public float healthMax;
     public float health;
     public float hurt;
+
+    public EnemyStateEnum state;
 
     public GameObject damageNumbersPrefab;
     
