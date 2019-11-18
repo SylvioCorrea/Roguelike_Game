@@ -452,7 +452,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -23.4, y: -16.35, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -11416,11 +11416,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_UiScaleMode: 1
-  m_ReferencePixelsPerUnit: 100
+  m_ReferencePixelsPerUnit: 16
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -11626,7 +11626,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 44, y: -50}
+  m_AnchoredPosition: {x: 52, y: -65}
   m_SizeDelta: {x: 694, y: 100}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!1001 &2108404859
@@ -11976,12 +11976,12 @@ PrefabInstance:
     - target: {fileID: 1321461414651743893, guid: 0d4e8112958970847aa558490f416f99,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -30.06
+      value: -11.57
       objectReference: {fileID: 0}
     - target: {fileID: 1321461414651743893, guid: 0d4e8112958970847aa558490f416f99,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -17.68
+      value: -2.26
       objectReference: {fileID: 0}
     - target: {fileID: 1321461414651743893, guid: 0d4e8112958970847aa558490f416f99,
         type: 3}
@@ -12036,6 +12036,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 362103539165672196, guid: 0d4e8112958970847aa558490f416f99,
+        type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1360259089}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d4e8112958970847aa558490f416f99, type: 3}
 --- !u!1001 &3517326302617024875

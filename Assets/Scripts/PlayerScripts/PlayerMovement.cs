@@ -8,13 +8,13 @@ public class PlayerMovement : MonoBehaviour
     bool isWalking;
     Rigidbody2D rigidBody;
 
-    PlayerState playerState;
+    PlayerCoreScript playerState;
     AnimationScript aniscr;
 
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
-        playerState = GetComponent<PlayerState>();
+        playerState = GetComponent<PlayerCoreScript>();
         aniscr = GetComponent<AnimationScript>();
     }
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EquipScript : MonoBehaviour
 {
-    public PlayerState playerState;
+    public PlayerCoreScript playerState;
     // Start is called before the first frame update
     void Start()
     {

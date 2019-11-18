@@ -274,13 +274,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ed815c6c8c83cd4386311c870bc722f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 0
-  health: 0
+  maxHealth: 120
+  currentHealth: 0
   flinched: 0
   poisoned: 0
   poisonTickTimer: 0
   invulnerable: 0
   playerAttackScript: {fileID: 0}
+  healthBar: {fileID: 0}
 --- !u!114 &1321461414651743881
 MonoBehaviour:
   m_ObjectHideFlags: 0

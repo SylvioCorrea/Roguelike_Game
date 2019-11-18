@@ -13,7 +13,7 @@ public class HammerKnightAttack : MonoBehaviour
         if(col.CompareTag("Player")) {
             Vector3 forceVector = (col.transform.position - transform.position).normalized * attackForce;
             AttackInfo aInfo = new AttackInfo(attackPower, forceVector, element);
-            col.GetComponent<PlayerState>().TakeHit(aInfo);
+            col.GetComponent<PlayerCoreScript>().TakeHit(aInfo);
         }
     }
 
@@ -23,7 +23,7 @@ public class HammerKnightAttack : MonoBehaviour
         if(col.CompareTag("Player")) {
             Vector3 forceVector = (col.transform.position - transform.position).normalized * attackForce;
             AttackInfo aInfo = new AttackInfo(attackPower, forceVector, element);
-            col.GetComponent<PlayerState>().TakeHit(aInfo);
+            col.GetComponent<PlayerCoreScript>().TakeHit(aInfo);
         }
     }
 }

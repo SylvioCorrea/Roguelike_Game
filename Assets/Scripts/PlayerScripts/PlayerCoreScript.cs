@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class PlayerState : MonoBehaviour
+public class PlayerCoreScript : MonoBehaviour
 {
     public float maxHealth;
-    public float health;
+    public float currentHealth;
     public bool flinched;
     float flinchCooldown;
     public bool poisoned;
@@ -18,10 +19,15 @@ public class PlayerState : MonoBehaviour
     Rigidbody2D playerRigidbody;
     SpriteRenderer spriteRenderer;
     public PlayerAttack playerAttackScript;
+
+    public Image healthBar; //Drag and drop the image from canvas here
+
+
     // Start is called before the first frame update
     void Start()
     {
-        health = maxHealth;
+        currentHealth = maxHealth;
+        healthBar.fillAmount = 1;
         flinched = false;
         invulnerable = false;
         aniscr = GetComponent<AnimationScript>();
@@ -50,7 +56,7 @@ public class PlayerState : MonoBehaviour
 
         if(poisoned) {
             if(poisonTickTimer <= 0) {
-                health -= maxHealth/20;
+                currentHealth -= maxHealth/20;
                 poisonTickTimer = 0.5f;
             } else {
                 poisonTickTimer -= Time.deltaTime;
@@ -61,18 +67,28 @@ public class PlayerState : MonoBehaviour
     public void TakeHit(AttackInfo aInfo)
     {
         if(!invulnerable) {
-            health -= aInfo.attackPower;
+            TakeDamage(aInfo.attackPower);
             flinched = true;
             flinchCooldown = 0.5f;
             invulnerable = true;
             invulnerabilityCooldown = 1f;
+
+            //Stop player movement
             playerRigidbody.velocity = Vector3.zero;
+            //Push player
             playerRigidbody.AddForce(aInfo.forceVector, ForceMode2D.Impulse);
             aniscr.Flinch();
             if(aInfo.element == Element.POISON) {
                 StartCoroutine(Poison());
             }
         }
+    }
+
+    public void TakeDamage(float damage) {
+        //Health does not drop below zero
+        currentHealth = Mathf.Max(currentHealth - damage, 0);
+        //Update healthbar
+        healthBar.fillAmount = currentHealth/maxHealth;
     }
 
     public IEnumerator Poison() {

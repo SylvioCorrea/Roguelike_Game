@@ -27,7 +27,7 @@ public class EnemyAttack : MonoBehaviour
         {
             Vector3 forceVector = (col.gameObject.transform.position - transform.position).normalized * attackForce;
             AttackInfo aInfo = new AttackInfo(attackPower, forceVector, element);
-            col.gameObject.GetComponent<PlayerState>().TakeHit(aInfo);
+            col.gameObject.GetComponent<PlayerCoreScript>().TakeHit(aInfo);
             //col.gameObject.GetComponent<PlayerState>().TakeHit(attackPower, transform.position, attackForce);
             //Debug.Log("Player hit!");
         }
@@ -38,7 +38,7 @@ public class EnemyAttack : MonoBehaviour
         if(col.gameObject.layer.Equals(targetLayer)) {
             Vector3 forceVector = (col.gameObject.transform.position - transform.position).normalized * attackForce;
             AttackInfo aInfo = new AttackInfo(attackPower, forceVector, element);
-            col.gameObject.GetComponent<PlayerState>().TakeHit(aInfo);
+            col.gameObject.GetComponent<PlayerCoreScript>().TakeHit(aInfo);
             //Debug.Log("Player hit!");
         }
     }

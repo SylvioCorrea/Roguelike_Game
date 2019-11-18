@@ -74,8 +74,8 @@
      <Compile Include="Assets\Scripts\PlayerScripts\AnimationScript.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\EquipScript.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\PlayerAttack.cs" />
+     <Compile Include="Assets\Scripts\PlayerScripts\PlayerCoreScript.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\PlayerMovement.cs" />
-     <Compile Include="Assets\Scripts\PlayerScripts\PlayerState.cs" />
      <Compile Include="Assets\Scripts\SlimeScripts\SlimeMovement.cs" />
      <Compile Include="Assets\Scripts\SlimeScripts\SlimePursuit.cs" />
      <Compile Include="Assets\Scripts\SlimeScripts\SlimeState.cs" />

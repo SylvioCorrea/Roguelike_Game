@@ -45,7 +45,7 @@ public class LootScript : MonoBehaviour
     public void OnMouseDown()
     {
         Cursor.SetCursor(null, Vector2.zero, cursorMode);
-        GameObject.FindWithTag("Player").GetComponent<PlayerState>().EquipWeapon(weapon);
+        GameObject.FindWithTag("Player").GetComponent<PlayerCoreScript>().EquipWeapon(weapon);
         Destroy(gameObject);
     }
 }
