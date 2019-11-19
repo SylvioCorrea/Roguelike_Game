@@ -7,26 +7,32 @@ public class PlayerCoreScript : MonoBehaviour
 {
     public float maxHealth;
     public float currentHealth;
+    public bool dead;
+
     public bool flinched;
     float flinchCooldown;
-    public bool poisoned;
-
+    
+    public float poisonTimer;
+    float poisonTimerMax = 5f;
     public float poisonTickTimer;
+    float poisonTickTimerMax = 0.5f;
+    
     public bool invulnerable;
-    float invulnerabilityCooldown;
+    float invulnerabilityTimer;
 
     AnimationScript aniscr;
     Rigidbody2D playerRigidbody;
     SpriteRenderer spriteRenderer;
     public PlayerAttack playerAttackScript;
 
-    public Image healthBar; //Drag and drop the image from canvas here
+    public Image healthBar;
 
 
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
+        healthBar = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<Image>();
         healthBar.fillAmount = 1;
         flinched = false;
         invulnerable = false;
@@ -45,21 +51,31 @@ public class PlayerCoreScript : MonoBehaviour
                 flinched = false;
                 aniscr.Unflinch();
             }
+        } else if(currentHealth<=0) {
+            dead = true;
+            playerRigidbody.velocity = Vector3.zero;
+            playerRigidbody.isKinematic = true; //Physics will no longer apply
+            aniscr.Die();
         }
 
         if(invulnerable) {
-            invulnerabilityCooldown -= Time.deltaTime;
-            if(invulnerabilityCooldown <= 0) {
+            invulnerabilityTimer -= Time.deltaTime;
+            if(invulnerabilityTimer <= 0) {
                 invulnerable = false;
             }
         }
 
-        if(poisoned) {
+        //Poisoning routine: suffer one tick of damage every half second until poison wears off
+        if(poisonTimer > 0) { //Is poisoned
             if(poisonTickTimer <= 0) {
-                currentHealth -= maxHealth/20;
-                poisonTickTimer = 0.5f;
+                TakeDamage(maxHealth/20); //Damage tick
+                poisonTickTimer = poisonTickTimerMax;
             } else {
                 poisonTickTimer -= Time.deltaTime;
+            }
+            poisonTimer-=Time.deltaTime;
+            if(poisonTimer<=0) { //Poison wore off, reset sprite color
+                spriteRenderer.color = Color.white;
             }
         }
     }
@@ -70,16 +86,18 @@ public class PlayerCoreScript : MonoBehaviour
             TakeDamage(aInfo.attackPower);
             flinched = true;
             flinchCooldown = 0.5f;
+            aniscr.Flinch();
+
             invulnerable = true;
-            invulnerabilityCooldown = 1f;
+            invulnerabilityTimer = 1f;
 
             //Stop player movement
             playerRigidbody.velocity = Vector3.zero;
             //Push player
             playerRigidbody.AddForce(aInfo.forceVector, ForceMode2D.Impulse);
-            aniscr.Flinch();
+            
             if(aInfo.element == Element.POISON) {
-                StartCoroutine(Poison());
+                Poison();
             }
         }
     }
@@ -91,14 +109,10 @@ public class PlayerCoreScript : MonoBehaviour
         healthBar.fillAmount = currentHealth/maxHealth;
     }
 
-    public IEnumerator Poison() {
-        poisoned = true;
-        spriteRenderer.color = new Color32(0x9C, 0xB5, 0x50, 0xFF);
-        Debug.Log("poisoned");
-        yield return new WaitForSeconds(3);
-        poisoned = false;
-        spriteRenderer.color = Color.white;
-        Debug.Log("unpoisoned");
+    public void Poison() {
+        poisonTimer = poisonTimerMax;
+        poisonTickTimer = poisonTickTimerMax;
+        spriteRenderer.color = new Color32(0x9C, 0xB5, 0x50, 0xFF); //Greenish tint
     }
 
     public void EquipWeapon(Weapon w) {
@@ -107,5 +121,9 @@ public class PlayerCoreScript : MonoBehaviour
         playerAttackScript.attackCoolDown = w.attackCoolDown;
         playerAttackScript.hitboxRadius = w.attackRadius;
         playerAttackScript.element = w.element;
+    }
+
+    public bool CanMove() {
+        return !(flinched || dead);
     }
 }

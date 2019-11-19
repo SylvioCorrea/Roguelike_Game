@@ -38,6 +38,10 @@ public class AnimationScript : MonoBehaviour
     {
         animator.SetBool("isWalking", false);
     }
+
+    public void Die(){
+        animator.Play("Death");
+    }
     
     
     

@@ -16,10 +16,14 @@ public class PlayerAttack : MonoBehaviour
     
     public LayerMask enemyLayerMask; //Maybe use a tag instead
     public GameObject slashEffectPrefab;
+
+    PlayerCoreScript playerCoreScript;
+
     // Start is called before the first frame update
     void Start()
     {
         coolDown = 0;
+        playerCoreScript = GetComponent<PlayerCoreScript>();
     }
 
     // Update is called once per frame
@@ -39,7 +43,7 @@ public class PlayerAttack : MonoBehaviour
         if(coolDown > 0) {
             coolDown -= Time.deltaTime;
 
-        } else if(Input.GetButtonDown("Fire1")) {
+        } else if(playerCoreScript.CanMove() && Input.GetButtonDown("Fire1")) {
                 Collider2D[] enemiesHit = Physics2D.OverlapCircleAll(attackPos.position, hitboxRadius, enemyLayerMask);
                 AttackInfo aInfo = new AttackInfo(attackPower, Vector3.zero, element);
                 foreach(Collider2D e in enemiesHit) {

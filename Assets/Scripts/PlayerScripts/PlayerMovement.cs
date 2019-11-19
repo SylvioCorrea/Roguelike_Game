@@ -8,19 +8,19 @@ public class PlayerMovement : MonoBehaviour
     bool isWalking;
     Rigidbody2D rigidBody;
 
-    PlayerCoreScript playerState;
+    PlayerCoreScript playerCoreScript;
     AnimationScript aniscr;
 
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
-        playerState = GetComponent<PlayerCoreScript>();
+        playerCoreScript = GetComponent<PlayerCoreScript>();
         aniscr = GetComponent<AnimationScript>();
     }
 
     void Update()
     {
-        if(playerState.flinched==false) {
+        if(playerCoreScript.CanMove()) {
             float inputH = Input.GetAxis("Horizontal");
             float inputV = Input.GetAxis("Vertical");
             

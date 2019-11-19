@@ -69,8 +69,13 @@
      <Compile Include="Assets\Scripts\HammerKnight\HammerKnightAttack.cs" />
      <Compile Include="Assets\Scripts\HammerKnight\HammerKnightPursuit.cs" />
      <Compile Include="Assets\Scripts\HammerKnight\HammerKnightState.cs" />
+     <Compile Include="Assets\Scripts\InventoryScripts\InventoryManager.cs" />
+     <Compile Include="Assets\Scripts\InventoryScripts\InventorySlotScript.cs" />
+     <Compile Include="Assets\Scripts\InventoryScripts\PauseMenuToggle.cs" />
+     <Compile Include="Assets\Scripts\InventoryScripts\PauseTest.cs" />
      <Compile Include="Assets\Scripts\Item.cs" />
      <Compile Include="Assets\Scripts\LootScript.cs" />
+     <Compile Include="Assets\Scripts\LootScript2.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\AnimationScript.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\EquipScript.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\PlayerAttack.cs" />
