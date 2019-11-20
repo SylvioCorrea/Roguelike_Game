@@ -9,6 +9,8 @@ public class PlayerCoreScript : MonoBehaviour
     public float currentHealth;
     public bool dead;
 
+    public Weapon weapon;
+
     public bool flinched;
     float flinchCooldown;
     
@@ -116,6 +118,7 @@ public class PlayerCoreScript : MonoBehaviour
     }
 
     public void EquipWeapon(Weapon w) {
+        weapon = w;
         playerAttackScript.attackPower = w.attackPower;
         playerAttackScript.attackForce = w.attackForce;
         playerAttackScript.attackCoolDown = w.attackCoolDown;

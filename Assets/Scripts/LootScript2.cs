@@ -57,8 +57,9 @@ public class LootScript2 : MonoBehaviour
 
     public void OnMouseDown()
     {
-        Cursor.SetCursor(null, Vector2.zero, cursorMode);
-        inventoryManager.PickUpItem(item);
-        Destroy(gameObject);
+        if(inventoryManager.PickUpItem(item)) {
+            Cursor.SetCursor(null, Vector2.zero, cursorMode);
+            Destroy(gameObject);
+        }
     }
 }
