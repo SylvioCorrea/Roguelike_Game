@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GoblinMovement : MonoBehaviour
+public class GoblinMovement : MonoBehaviour, IEnemyPursuit
 {
     public Transform target;
     public float idleWaitTime;
@@ -19,12 +19,12 @@ public class GoblinMovement : MonoBehaviour
     public float targetDistance;
     public Rigidbody2D rigidBody;
     Animator animator;
-    GoblinState coreScript;
+    GoblinCoreScript coreScript;
     // Start is called before the first frame update
     void Start()
     {
         target = GameObject.FindWithTag("Player").transform;
-        coreScript = GetComponent<GoblinState>();
+        coreScript = GetComponent<GoblinCoreScript>();
         rigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         idleTimer = idleWaitTime;
@@ -139,5 +139,10 @@ public class GoblinMovement : MonoBehaviour
         if(vecX != 0 && Mathf.Sign(vecX)!=Mathf.Sign(transform.localScale.x)) {
             transform.localScale = Vector3.Scale(transform.localScale, new Vector3(-1,1,1));
         }
+    }
+
+    public void SetAlertDistance(float n)
+    {
+        alertDistance = n;
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HammerKnightState : EnemyCoreScript
+public class HammerKnightCoreScript : EnemyCoreScript
 {
     SpriteRenderer spriteRenderer;
     // Start is called before the first frame update
@@ -15,7 +15,7 @@ public class HammerKnightState : EnemyCoreScript
     void Update()
     {
         if(health <= 0) {
-            Destroy(gameObject);
+            Die();
         }
     }
 

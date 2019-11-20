@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GoblinState : EnemyCoreScript
+public class GoblinCoreScript : EnemyCoreScript
 {
     
     // Start is called before the first frame update
@@ -15,7 +15,7 @@ public class GoblinState : EnemyCoreScript
     void Update()
     {
         if(health <= 0) {
-            Destroy(gameObject);
+            Die();
         }
         if(hurt > 0) {
             hurt -= Time.deltaTime;

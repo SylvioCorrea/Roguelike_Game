@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 5674791422822884903}
   - component: {fileID: 4915200806774171233}
   - component: {fileID: 5128577392221997549}
-  - component: {fileID: 2731509922882118511}
   - component: {fileID: 4829643109584542811}
   - component: {fileID: 5674791422822884900}
   - component: {fileID: 3354962395756747218}
@@ -168,23 +167,6 @@ MonoBehaviour:
   state: 0
   damageNumbersPrefab: {fileID: 8142926907962709068, guid: dfc23ebdb0f487240922ce1ed269c550,
     type: 3}
---- !u!114 &2731509922882118511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5674791422822884901}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4acf2d0ec3802eb4f9298389b5ce6dc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  speed: 5
-  alertDistance: 8
-  targetDistance: 0.5
-  rigidBody: {fileID: 0}
 --- !u!114 &4829643109584542811
 MonoBehaviour:
   m_ObjectHideFlags: 0

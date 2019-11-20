@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GoblinPursuit : MonoBehaviour
+public class GoblinPursuit : MonoBehaviour, IEnemyPursuit
 {
     public Transform target;
     public float speed;
@@ -43,5 +43,9 @@ public class GoblinPursuit : MonoBehaviour
                 animator.SetBool("isRunning", false);
             }
         }
+    }
+
+    public void SetAlertDistance(float n) {
+        alertDistance = n;
     }
 }

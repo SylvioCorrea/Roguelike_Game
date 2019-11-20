@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HammerKnightPursuit : MonoBehaviour
+public class HammerKnightMovement : MonoBehaviour, IEnemyPursuit
 {
     public Transform target;
     public bool lockedOn;
@@ -70,5 +70,9 @@ public class HammerKnightPursuit : MonoBehaviour
         } else {
             attackCoolDown -= Time.deltaTime;
         }
+    }
+
+    public void SetAlertDistance(float n) {
+        alertDistance = n;
     }
 }

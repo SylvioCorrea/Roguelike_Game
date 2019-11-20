@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class SlimeState : EnemyCoreScript
+public class SlimeCoreScript : EnemyCoreScript
 {
     
     /*
@@ -32,6 +32,9 @@ public class SlimeState : EnemyCoreScript
     // Update is called once per frame
     void Update()
     {
+        if(health<=0) {
+            Die();
+        }
         //Division logic
         if(timeToDivide > 0) {
             timeToDivide-=Time.deltaTime;
@@ -58,9 +61,6 @@ public class SlimeState : EnemyCoreScript
     public override void TakeHit(AttackInfo aInfo)
     {
         TakeDamage(aInfo.attackPower);
-        if(health<=0) {
-            Destroy(gameObject);
-        }
         //GetComponent<Rigidbody2D>().AddForce(aInfo.forceVector, ForceMode2D.Impulse);
         GetComponent<SpriteRenderer>().color = Color.red;
         hurt = 0.25f;

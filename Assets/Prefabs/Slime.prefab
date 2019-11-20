@@ -144,8 +144,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06a13fb9d3069214097f171d02c28d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthMax: 10
   health: 100
   hurt: 0
+  state: 0
   damageNumbersPrefab: {fileID: 8142926907962709068, guid: dfc23ebdb0f487240922ce1ed269c550,
     type: 3}
   dividing: 0

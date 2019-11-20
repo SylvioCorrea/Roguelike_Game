@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public abstract class EnemyCoreScript : MonoBehaviour
+public abstract class EnemyCoreScript : MonoBehaviour, IDeathNotifier
 {
     public float healthMax;
     public float health;
@@ -12,7 +12,14 @@ public abstract class EnemyCoreScript : MonoBehaviour
     public EnemyStateEnum state;
 
     public GameObject damageNumbersPrefab;
+
+    public List<IListener> listeners;
     
+    public void Awake()
+    {
+        listeners = new List<IListener>();
+    }
+
     public abstract void TakeHit(AttackInfo aInfo);
     
     public void TakeDamage(float n)
@@ -20,6 +27,18 @@ public abstract class EnemyCoreScript : MonoBehaviour
         health -= n;
         GameObject damageNumbers = Instantiate(damageNumbersPrefab, transform.position, Quaternion.identity);
         damageNumbers.GetComponent<TextMeshPro>().text = ((int)n).ToString();
+    }
+
+    public void Die()
+    {
+        foreach(IListener l in listeners) {
+            l.Notify();
+        }
+        Destroy(gameObject);
+    }
+
+    public void SubscribeListener(IListener l) {
+        listeners.Add(l);
     }
 
 }
