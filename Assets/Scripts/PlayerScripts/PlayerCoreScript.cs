@@ -15,9 +15,10 @@ public class PlayerCoreScript : MonoBehaviour
     float flinchCooldown;
     
     public float poisonTimer;
-    float poisonTimerMax = 5f;
     public float poisonTickTimer;
-    float poisonTickTimerMax = 0.5f;
+    public float poisonTimerMax;
+    public float poisonTickTimerMax;
+    public float poisonDamageRatio;
     
     public bool invulnerable;
     float invulnerabilityTimer;
@@ -28,20 +29,26 @@ public class PlayerCoreScript : MonoBehaviour
     public PlayerAttack playerAttackScript;
 
     public Image healthBar;
+    public Color healthBarStandardColor;
+    public Color healthBarPoisonColor;
 
-
-    // Start is called before the first frame update
-    void Start()
+    public void Awake()
     {
-        currentHealth = maxHealth;
         healthBar = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<Image>();
-        healthBar.fillAmount = 1;
-        flinched = false;
-        invulnerable = false;
         aniscr = GetComponent<AnimationScript>();
         playerRigidbody = GetComponent<Rigidbody2D>();
         playerAttackScript = GetComponent<PlayerAttack>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+    // Start is called before the first frame update
+    void Start()
+    {
+        currentHealth = maxHealth;
+        healthBarStandardColor = new Color32(0xA8, 0x35, 0x35, 0xFF);
+        healthBarPoisonColor = new Color32(0x9C, 0xB5, 0x50, 0xFF);
+        healthBar.fillAmount = 1;
+        flinched = false;
+        invulnerable = false;
     }
 
     // Update is called once per frame
@@ -70,14 +77,14 @@ public class PlayerCoreScript : MonoBehaviour
         //Poisoning routine: suffer one tick of damage every half second until poison wears off
         if(poisonTimer > 0) { //Is poisoned
             if(poisonTickTimer <= 0) {
-                TakeDamage(maxHealth/20); //Damage tick
+                TakeDamage(maxHealth*poisonDamageRatio); //Damage tick
                 poisonTickTimer = poisonTickTimerMax;
             } else {
                 poisonTickTimer -= Time.deltaTime;
             }
             poisonTimer-=Time.deltaTime;
-            if(poisonTimer<=0) { //Poison wore off, reset sprite color
-                spriteRenderer.color = Color.white;
+            if(poisonTimer<=0) { //Poison wore off, reset colors
+                Unpoison();
             }
         }
     }
@@ -111,10 +118,25 @@ public class PlayerCoreScript : MonoBehaviour
         healthBar.fillAmount = currentHealth/maxHealth;
     }
 
+    public void RecoverHealthRatio(float ratio)
+    {
+        currentHealth = Mathf.Min(maxHealth, currentHealth + maxHealth*ratio);
+        healthBar.fillAmount = currentHealth/maxHealth;
+    }
+
     public void Poison() {
         poisonTimer = poisonTimerMax;
         poisonTickTimer = poisonTickTimerMax;
-        spriteRenderer.color = new Color32(0x9C, 0xB5, 0x50, 0xFF); //Greenish tint
+        spriteRenderer.color = healthBarPoisonColor;
+        healthBar.color = healthBarPoisonColor;
+    }
+
+    public void Unpoison()
+    {
+        poisonTimer = 0;
+        poisonTickTimer = 0;
+        spriteRenderer.color = Color.white;
+        healthBar.color = healthBarStandardColor;
     }
 
     public void EquipWeapon(Weapon w) {

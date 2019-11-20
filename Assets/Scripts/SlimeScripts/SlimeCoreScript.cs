@@ -36,7 +36,7 @@ public class SlimeCoreScript : EnemyCoreScript
             Die();
         }
         //Division logic
-        if(timeToDivide > 0) {
+        if(divisionsLeft > 0 && timeToDivide > 0) {
             timeToDivide-=Time.deltaTime;
             if(timeToDivide<=0) {
                 dividing = 2;
@@ -79,5 +79,6 @@ public class SlimeCoreScript : EnemyCoreScript
         GameObject newSlime = Instantiate(slimePrefab, transform.position, Quaternion.identity);
         newSlime.GetComponent<Rigidbody2D>().AddForce(Vector3.left*4, ForceMode2D.Impulse);
         divisionsLeft--;
+        newSlime.GetComponent<SlimeCoreScript>().divisionsLeft = divisionsLeft;
     }
 }

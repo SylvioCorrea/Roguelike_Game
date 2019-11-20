@@ -69,6 +69,7 @@
      <Compile Include="Assets\Scripts\HammerKnight\HammerKnightAttack.cs" />
      <Compile Include="Assets\Scripts\HammerKnight\HammerKnightCoreScript.cs" />
      <Compile Include="Assets\Scripts\HammerKnight\HammerKnightMovement.cs" />
+     <Compile Include="Assets\Scripts\HealthPotionScript.cs" />
      <Compile Include="Assets\Scripts\IDeathNotifier.cs" />
      <Compile Include="Assets\Scripts\IEnemyPursuit.cs" />
      <Compile Include="Assets\Scripts\IListener.cs" />
@@ -76,9 +77,9 @@
      <Compile Include="Assets\Scripts\InventoryScripts\InventorySlotScript.cs" />
      <Compile Include="Assets\Scripts\InventoryScripts\PauseMenuToggle.cs" />
      <Compile Include="Assets\Scripts\InventoryScripts\PauseTest.cs" />
+     <Compile Include="Assets\Scripts\IPickupItem.cs" />
      <Compile Include="Assets\Scripts\Item.cs" />
      <Compile Include="Assets\Scripts\LootScript.cs" />
-     <Compile Include="Assets\Scripts\LootScript2.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\AnimationScript.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\EquipScript.cs" />
      <Compile Include="Assets\Scripts\PlayerScripts\PlayerAttack.cs" />
@@ -86,6 +87,7 @@
      <Compile Include="Assets\Scripts\PlayerScripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\SlimeScripts\SlimeCoreScript.cs" />
      <Compile Include="Assets\Scripts\SlimeScripts\SlimeMovement.cs" />
+     <Compile Include="Assets\Scripts\SpawnerEventZoneScript.cs" />
      <Compile Include="Assets\Scripts\SpawnerScript.cs" />
      <Compile Include="Assets\Scripts\Weapon.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />

@@ -276,12 +276,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 120
   currentHealth: 0
+  dead: 0
+  weapon: {fileID: 0}
   flinched: 0
-  poisoned: 0
+  poisonTimer: 0
+  poisonTimerMax: 5
   poisonTickTimer: 0
+  poisonTickTimerMax: 1
+  poisonDamageRatio: 0.015
   invulnerable: 0
   playerAttackScript: {fileID: 0}
   healthBar: {fileID: 0}
+  healthBarStandardColor: {r: 0, g: 0, b: 0, a: 0}
+  healthBarPoisonColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1321461414651743881
 MonoBehaviour:
   m_ObjectHideFlags: 0

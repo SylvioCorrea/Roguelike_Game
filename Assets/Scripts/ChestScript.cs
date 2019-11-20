@@ -9,7 +9,8 @@ public class ChestScript : MonoBehaviour
     public Animator animator;
 
     public Transform lootEmpty;
-    public Weapon[] contents;
+    
+    public GameObject[] contents; //Contents of a chest should have a RigidBody
     
     // Start is called before the first frame update
     void Start()
@@ -23,15 +24,14 @@ public class ChestScript : MonoBehaviour
         if(canBeOpened && !isOpen && Input.GetKeyDown(KeyCode.E)) {
             isOpen = true;
             animator.Play("ChestOpen");
-            //Release all loot
+            //Release all loot in a circular fashion around the chest
+            float radius = 360/contents.Length;
             int n = 1;
-            foreach(Weapon item in contents) {
-                Vector3 forceVector = Quaternion.Euler(0 , 0, n*80) * Vector3.right;
-                Transform loot = Instantiate(lootEmpty, transform.position+forceVector*0.5f, Quaternion.identity);
-                loot.GetComponent<LootScript>().SetItem(item);
-                loot.GetComponent<Rigidbody2D>().AddForce(forceVector*5, ForceMode2D.Impulse);
+            foreach(GameObject item in contents) {
+                Vector3 forceVector = Quaternion.Euler(0 , 0, n*radius) * Vector3.right;
+                GameObject loot = Instantiate(item, transform.position+forceVector*0.5f, Quaternion.identity);
+                loot.GetComponent<Rigidbody2D>().AddForce(forceVector*3, ForceMode2D.Impulse);
                 n++;
-                Debug.Log(forceVector);
             }
         }
     }
