@@ -59,7 +59,7 @@ public class InventoryManager : MonoBehaviour
         UpdateStatsUI();
     }
 
-    void UpdateStatsUI() {
+    public void UpdateStatsUI() {
         Weapon w = playerCoreScript.weapon;
         //Change equipped weapon image
         equipedItemImage.sprite = w.GetSprite();

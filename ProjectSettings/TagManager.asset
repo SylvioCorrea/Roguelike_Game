@@ -9,6 +9,7 @@ TagManager:
   - InventoryItemImage
   - PauseMenu
   - Canvas
+  - GameManager
   layers:
   - Default
   - TransparentFX

@@ -32,6 +32,10 @@ public class PlayerCoreScript : MonoBehaviour
     public Color healthBarStandardColor;
     public Color healthBarPoisonColor;
 
+    public InventoryManager inventoryManager;
+
+    public GameManagerScript gameManager;
+
     public void Awake()
     {
         healthBar = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<Image>();
@@ -39,10 +43,16 @@ public class PlayerCoreScript : MonoBehaviour
         playerRigidbody = GetComponent<Rigidbody2D>();
         playerAttackScript = GetComponent<PlayerAttack>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        inventoryManager = GameObject.FindWithTag("PauseMenu").GetComponent<InventoryManager>();
+        gameManager = GameObject.FindWithTag("GameManager").GetComponent<GameManagerScript>();
     }
     // Start is called before the first frame update
     void Start()
     {
+        if(weapon) {
+            EquipWeapon(weapon);
+        }
+        inventoryManager.UpdateStatsUI();
         currentHealth = maxHealth;
         healthBarStandardColor = new Color32(0xA8, 0x35, 0x35, 0xFF);
         healthBarPoisonColor = new Color32(0x9C, 0xB5, 0x50, 0xFF);
