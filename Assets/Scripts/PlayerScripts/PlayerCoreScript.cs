@@ -75,6 +75,7 @@ public class PlayerCoreScript : MonoBehaviour
             playerRigidbody.velocity = Vector3.zero;
             playerRigidbody.isKinematic = true; //Physics will no longer apply
             aniscr.Die();
+            gameManager.GameOver();
         }
 
         if(invulnerable) {

@@ -68,8 +68,8 @@ public class InventoryManager : MonoBehaviour
 
         //Change stats
         attackValue.text = w.attackPower.ToString();
-        forceValue.text = w.attackForce.ToString();
-        speedValue.text = (1 / w.attackCoolDown).ToString();
+        forceValue.text = w.attackForce.ToString("0.00");
+        speedValue.text = (1 / w.attackCoolDown).ToString("0.00");
         reachValue.text = w.attackRadius.ToString();
         elementValue.text = w.element.ToString();
     }
