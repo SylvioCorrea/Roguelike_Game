@@ -11,6 +11,7 @@ TagManager:
   - Canvas
   - GameManager
   - GameOverEmpty
+  - StageClearEmpty
   layers:
   - Default
   - TransparentFX
@@ -24,8 +25,8 @@ TagManager:
   - Player
   - Chest
   - Loot
-  - 
-  - 
+  - PlayerOnly
+  - EnemyProjectile
   - 
   - 
   - 

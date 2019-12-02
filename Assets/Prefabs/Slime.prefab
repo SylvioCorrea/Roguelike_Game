@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06a13fb9d3069214097f171d02c28d53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthMax: 10
+  healthMax: 50
   health: 100
   hurt: 0
   state: 0
@@ -153,7 +153,7 @@ MonoBehaviour:
   dividing: 0
   timeToDivide: 0
   divideRangeBegin: 3
-  divideRangeEnd: 7
+  divideRangeEnd: 6
   divisionsLeft: 2
   slimePrefab: {fileID: 3326279469674860129}
 --- !u!114 &545757288527824835

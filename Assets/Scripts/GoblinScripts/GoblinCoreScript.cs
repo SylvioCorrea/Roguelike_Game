@@ -5,12 +5,10 @@ using UnityEngine;
 public class GoblinCoreScript : EnemyCoreScript
 {
     
-    // Start is called before the first frame update
     void Start()
     {
-        hurt = 0f;
+        health = healthMax;
     }
-
     // Update is called once per frame
     void Update()
     {

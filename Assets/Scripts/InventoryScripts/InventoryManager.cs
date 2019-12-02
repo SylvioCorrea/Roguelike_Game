@@ -18,6 +18,9 @@ public class InventoryManager : MonoBehaviour
     public TextMeshProUGUI speedValue;
     public TextMeshProUGUI elementValue;
 
+    int keysHeld; //Keys held by the player
+    public TextMeshProUGUI keysHeldValue;
+
     public void Awake()
     {
         playerCoreScript = GameObject.FindWithTag("Player").GetComponent<PlayerCoreScript>();
@@ -27,23 +30,10 @@ public class InventoryManager : MonoBehaviour
         reachValue = statsUI.Find("ReachValue").GetComponent<TextMeshProUGUI>();
         speedValue = statsUI.Find("SpeedValue").GetComponent<TextMeshProUGUI>();
         elementValue = statsUI.Find("ElementValue").GetComponent<TextMeshProUGUI>();
+        keysHeldValue = statsUI.Find("KeysHeldValue").GetComponent<TextMeshProUGUI>();
         foreach(InventorySlotScript iss in inventorySlots) {
             iss.inventoryManager = this;
         }
-    }
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        if(playerCoreScript.weapon != null) {
-
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     //Called by inventory buttons
@@ -76,23 +66,35 @@ public class InventoryManager : MonoBehaviour
 
     public bool PickUpItem(Item item)
     {
-        //Search for empty inventory slot to store item
-        for(int i=0; i<inventorySlots.Length; i++) {
-            if(inventorySlots[i].item == null) {
-                inventorySlots[i].StoreItem(item);
-                Debug.Log("item stored");
-                return true;
+        if(item is Weapon) {
+            //Search for empty inventory slot to store item
+            for(int i=0; i<inventorySlots.Length; i++) {
+                if(inventorySlots[i].item == null) {
+                    inventorySlots[i].StoreItem(item);
+                    Debug.Log("item stored");
+                    return true;
+                }
             }
+            //There are no more empty slots
+            Debug.Log("inventory full");
+            return false;
+        } else if (item is Key) {
+            keysHeld++;
+            keysHeldValue.text = keysHeld.ToString("00");
+            return true;
         }
-        //There are no more empty slots
-        Debug.Log("inventory full");
+        Debug.Log("No code for this class of item yet.");
         return false;
     }
 
-    public void ScreamIfNull(Object o, string scream)
+    public bool UseKey()
     {
-        if(!o) {
-            Debug.Log(scream);
+        if(keysHeld>0) {
+            keysHeld--;
+            keysHeldValue.text = keysHeld.ToString("00");
+            return true;
+        } else {
+            return false;
         }
     }
 }

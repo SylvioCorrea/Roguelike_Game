@@ -7,23 +7,8 @@ public class GameManagerScript : MonoBehaviour
 {
     
     public GameObject gameOverEmpty;
-    // Start is called before the first frame update
-    void Awake()
-    {
-        gameOverEmpty = GameObject.FindWithTag("GameOverEmpty");
-    }
+    public GameObject stageClearEmpty;
     
-    void Start()
-    {
-        gameOverEmpty.gameObject.SetActive(false);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void GameOver()
     {
         gameOverEmpty.gameObject.SetActive(true);
@@ -32,5 +17,10 @@ public class GameManagerScript : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void StageClear()
+    {
+        stageClearEmpty.gameObject.SetActive(true);
     }
 }

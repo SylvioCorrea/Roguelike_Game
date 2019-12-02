@@ -6,7 +6,7 @@ public class LootScript : MonoBehaviour
 {
     public Item item;
     public SpriteRenderer spriteRenderer;
-    public bool canBePickedUp;
+    public bool canBePickedUp; //Would be used if pickup button wasn't mouse 1
 
     public Texture2D cursorTexture;
     public CursorMode cursorMode = CursorMode.Auto;
@@ -28,12 +28,6 @@ public class LootScript : MonoBehaviour
             spriteRenderer = GetComponentInChildren<SpriteRenderer>();
             spriteRenderer.sprite = item.GetSprite();
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void SetItem(Item i)

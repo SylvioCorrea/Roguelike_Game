@@ -4,5 +4,5 @@ using UnityEngine;
 
 public enum EnemyStateEnum
 {
-    IDLE, PATROL, PURSUIT, HURT
+    IDLE, PATROL, PURSUIT, ENGAGE, HURT
 };
