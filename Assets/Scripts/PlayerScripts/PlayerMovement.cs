@@ -21,8 +21,8 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         if(playerCoreScript.CanMove()) {
-            float inputH = Input.GetAxis("Horizontal");
-            float inputV = Input.GetAxis("Vertical");
+            float inputH = Input.GetAxisRaw("Horizontal");
+            float inputV = Input.GetAxisRaw("Vertical");
             
             float deltaH = inputH * walkSpeed;
             float deltaV = inputV * walkSpeed;

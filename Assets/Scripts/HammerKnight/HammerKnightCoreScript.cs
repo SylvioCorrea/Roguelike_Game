@@ -9,6 +9,7 @@ public class HammerKnightCoreScript : EnemyCoreScript
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        health = healthMax;
     }
 
     // Update is called once per frame

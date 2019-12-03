@@ -121,7 +121,6 @@ GameObject:
   - component: {fileID: 1321461414651743893}
   - component: {fileID: 1321461414651743894}
   - component: {fileID: 1321461414651743895}
-  - component: {fileID: 1321461414651743880}
   - component: {fileID: 2217199850524764334}
   - component: {fileID: 362103539165672196}
   - component: {fileID: 1321461414651743881}
@@ -215,37 +214,11 @@ Rigidbody2D:
   m_LinearDrag: 5
   m_AngularDrag: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 245f22505ca7d134b802ee1d5f760931, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &1321461414651743880
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1321461414651743882}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.013725519, y: -0.3918512}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
-    newSize: {x: 2, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.67312586, y: 1.0386322}
-  m_EdgeRadius: 0
 --- !u!70 &2217199850524764334
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -280,8 +253,8 @@ MonoBehaviour:
   weapon: {fileID: 0}
   flinched: 0
   poisonTimer: 0
-  poisonTimerMax: 5
   poisonTickTimer: 0
+  poisonTimerMax: 5
   poisonTickTimerMax: 1
   poisonDamageRatio: 0.015
   invulnerable: 0
@@ -289,6 +262,8 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   healthBarStandardColor: {r: 0, g: 0, b: 0, a: 0}
   healthBarPoisonColor: {r: 0, g: 0, b: 0, a: 0}
+  inventoryManager: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!114 &1321461414651743881
 MonoBehaviour:
   m_ObjectHideFlags: 0

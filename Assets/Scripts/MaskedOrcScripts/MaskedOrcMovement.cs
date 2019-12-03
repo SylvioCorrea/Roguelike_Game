@@ -6,15 +6,19 @@ public class MaskedOrcMovement : EnemyMovementScript
 {
     
     public Transform target;
-    public float idleWaitTime;
+    public float idleMaxTime;
     public float idleTimer;
+
+    public float waitMaxTime;
+    public float waitTimer;
 
     public float speed;
     
     public float attackTimerMax;
     public float attackTimer;
     public float alertDistance;
-    public float targetDistance;
+    public float targetTooCloseDistance; //Will flee if at this distance
+    public float targetTooFarDistance; //Will pursuit if at this distance
     Animator animator;
     MaskedOrcCoreScript coreScript;
     public Transform projectile;
@@ -31,7 +35,7 @@ public class MaskedOrcMovement : EnemyMovementScript
     // Start is called before the first frame update
     void Start()
     {
-        idleTimer = idleWaitTime;
+        StartIdle();
     }
 
     // Update is called once per frame
@@ -51,11 +55,20 @@ public class MaskedOrcMovement : EnemyMovementScript
 
     void Update()
     {
-        if(attackTimer>0) { //attackTimer always counts down no matter what state the enemy is in
+        if(attackTimer>0) { //attackTimer always decreases no matter what state the enemy is in
             attackTimer -= Time.deltaTime;
         }
 
         switch(coreScript.state) {
+            
+            case EnemyStateEnum.WAIT: //Brief inactivity right after an attack
+                if(waitTimer<=0) {
+                    StartIdle();
+                } else {
+                    waitTimer -= Time.deltaTime;
+                }
+                break;
+            
             
             case EnemyStateEnum.ENGAGE:
                 if(!TargetIsClose()) { //Target is too far. Stop engaging.
@@ -65,10 +78,16 @@ public class MaskedOrcMovement : EnemyMovementScript
                     if(attackTimer <= 0) { //Enemy can attack again
                         ThrowProjectile();
                         attackTimer = attackTimerMax;
+                        StartWait();
+
 
                     } else { //It's too soon to attack again
                         if(TargetIsWayTooClose()) { //Flee from target
                             Vector3 speedUnitVector = (transform.position - target.position).normalized;
+                            rigidBody.velocity = speedUnitVector * speed;
+                            TurnIfNeeded();
+                        } else if(TargetIsWayTooFar()) {
+                            Vector3 speedUnitVector = (target.position - transform.position).normalized;
                             rigidBody.velocity = speedUnitVector * speed;
                             TurnIfNeeded();
                         }
@@ -87,7 +106,7 @@ public class MaskedOrcMovement : EnemyMovementScript
                 //Debug.Log("idle");
                 if(TargetIsClose()) { //Player is close enough for pursuit
                     StartEngage();
-                } else if(idleTimer>0) { //Enemy resting
+                } else if(idleTimer>0) { //Enemy resting between patrols
                     idleTimer -= Time.deltaTime;
                 } else {
                     StartPatrol();
@@ -116,7 +135,14 @@ public class MaskedOrcMovement : EnemyMovementScript
 
     void StartIdle()
     {
+        idleTimer = idleMaxTime;
         coreScript.state = EnemyStateEnum.IDLE;
+    }
+
+    void StartWait()
+    {
+        waitTimer = waitMaxTime;
+        coreScript.state = EnemyStateEnum.WAIT;
     }
 
     bool TargetIsClose()
@@ -126,7 +152,12 @@ public class MaskedOrcMovement : EnemyMovementScript
 
     bool TargetIsWayTooClose()
     {
-        return Vector3.Distance(target.position, transform.position) < targetDistance;
+        return Vector3.Distance(target.position, transform.position) <= targetTooCloseDistance;
+    }
+
+    bool TargetIsWayTooFar()
+    {
+        return Vector3.Distance(target.position, transform.position) >= targetTooFarDistance;
     }
 
     override public void PatrolPointReached()
@@ -136,14 +167,16 @@ public class MaskedOrcMovement : EnemyMovementScript
 
     public void ThrowProjectile()
     {
-        Transform instantiatedProjectile = Instantiate(projectile, transform.position, Quaternion.identity);
         Vector3 speedUnitVector = (target.position - transform.position).normalized;
         
-        //Turn sprite if needed
+        //Turn sprite towards player
         float vecX = speedUnitVector.x;
-        if(vecX != 0 && Mathf.Sign(vecX)!=Mathf.Sign(instantiatedProjectile.localScale.x)) {
-            instantiatedProjectile.localScale = Vector3.Scale(transform.localScale, new Vector3(-1,1,1));
+        if(vecX != 0 && Mathf.Sign(vecX)!=Mathf.Sign(transform.localScale.x)) {
+            transform.localScale = Vector3.Scale(transform.localScale, new Vector3(-1,1,1));
         }
+        
+        //Spawn projectile slightly away from enemy to avoid instantly hitting walls
+        Transform instantiatedProjectile = Instantiate(projectile, transform.position + speedUnitVector * 0.5f, Quaternion.identity);
 
         instantiatedProjectile.GetComponent<Rigidbody2D>().velocity = speedUnitVector * instantiatedProjectile.GetComponent<EnemyProjectile>().speed;
     }

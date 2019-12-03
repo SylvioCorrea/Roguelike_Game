@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5674791422822884901
+--- !u!1 &399821451940114743
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,42 +8,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5674791422822884904}
-  - component: {fileID: 5674791422822884905}
-  - component: {fileID: 5674791422822884902}
-  - component: {fileID: 4915200806774171233}
-  - component: {fileID: 5128577392221997549}
-  - component: {fileID: 4829643109584542811}
-  - component: {fileID: 5674791422822884900}
-  - component: {fileID: 3354962395756747218}
+  - component: {fileID: 2350716062284722475}
+  - component: {fileID: 3654881516507119926}
+  - component: {fileID: 1822805797373450982}
+  - component: {fileID: 7535203183403558414}
+  - component: {fileID: 1800003708561694444}
+  - component: {fileID: 5911115057443441040}
+  - component: {fileID: 9098617443488410781}
   m_Layer: 8
-  m_Name: Goblin
+  m_Name: MaskedOrc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5674791422822884904
+--- !u!4 &2350716062284722475
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5674791422822884901}
+  m_GameObject: {fileID: 399821451940114743}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.3, y: -1.96, z: 0}
+  m_LocalPosition: {x: -18.91, y: -21.87, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &5674791422822884905
+--- !u!212 &3654881516507119926
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5674791422822884901}
+  m_GameObject: {fileID: 399821451940114743}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -73,100 +72,29 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1331534575
   m_SortingLayer: 1
-  m_SortingOrder: 20
-  m_Sprite: {fileID: 21300000, guid: 59945c2186d86f64db1f64160b28542e, type: 3}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 4e7a19e5c97aa58449bba7deabb136bd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 1.25}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &5674791422822884902
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5674791422822884901}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 5
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!58 &4915200806774171233
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5674791422822884901}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.029244363, y: -0.012185127}
-  serializedVersion: 2
-  m_Radius: 0.2977154
---- !u!114 &5128577392221997549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5674791422822884901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5abcaab9a0ae1854fbaee0b20fa80232, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthMax: 80
-  health: 0
-  hurt: 0
-  state: 0
-  damageNumbersPrefab: {fileID: 8142926907962709068, guid: dfc23ebdb0f487240922ce1ed269c550,
-    type: 3}
---- !u!114 &4829643109584542811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5674791422822884901}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a57b9579c0fce0b4eaef2bddb6d12ee9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetLayer: 0
-  attackPower: 10
-  attackForce: 8
-  element: 0
---- !u!95 &5674791422822884900
+--- !u!95 &1822805797373450982
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5674791422822884901}
+  m_GameObject: {fileID: 399821451940114743}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6c48b4a9d56c32247bb117f609bbb1e8, type: 2}
+  m_Controller: {fileID: 9100000, guid: c75bb79662bd86a47ad421c0600d4f2f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -175,26 +103,97 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &3354962395756747218
+--- !u!50 &7535203183403558414
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399821451940114743}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 3
+  m_LinearDrag: 5
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: 245f22505ca7d134b802ee1d5f760931, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!61 &1800003708561694444
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399821451940114743}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.07865715, y: -0.14551544}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1.25}
+    newSize: {x: 1, y: 1.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5595207, y: 0.83311844}
+  m_EdgeRadius: 0
+--- !u!114 &5911115057443441040
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5674791422822884901}
+  m_GameObject: {fileID: 399821451940114743}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6a6433a9996d0e4ebb413679baa552d, type: 3}
+  m_Script: {fileID: 11500000, guid: 6938beb985f3da248b12df4d32790073, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  idleWaitTime: 2
-  idleTimer: 0
-  pursuitSpeed: 5
-  patrolSpeed: 2
-  patrolPoints: []
-  currentPatrolPointIndex: 0
-  reachedEndOfPatrolPath: 0
-  alertDistance: 8
-  targetDistance: 0.5
+  healthMax: 40
+  health: 0
+  hurt: 0
+  state: 0
+  damageNumbersPrefab: {fileID: 8142926907962709068, guid: dfc23ebdb0f487240922ce1ed269c550,
+    type: 3}
+  deathEffect: {fileID: 2904615578441018363, guid: 56332dcf941fa914fbb60f74a5279896,
+    type: 3}
+--- !u!114 &9098617443488410781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399821451940114743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e569b75d4185c6647ab29945a11bf2aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   rigidBody: {fileID: 0}
+  target: {fileID: 0}
+  idleMaxTime: 0
+  idleTimer: 0
+  waitMaxTime: 1
+  waitTimer: 0
+  speed: 5
+  attackTimerMax: 3
+  attackTimer: 0
+  alertDistance: 11
+  targetTooCloseDistance: 7
+  targetTooFarDistance: 9
+  projectile: {fileID: 665451051221044657, guid: e1b0c2905bdcd2846bc60fa890749147,
+    type: 3}
+  patrolScript: {fileID: 0}

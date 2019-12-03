@@ -119,12 +119,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81cc0763c8e4cf74892a0c5e884f7a1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthMax: 250
+  healthMax: 600
   health: 0
   hurt: 0
   state: 0
   damageNumbersPrefab: {fileID: 8142926907962709068, guid: dfc23ebdb0f487240922ce1ed269c550,
     type: 3}
+  deathEffect: {fileID: 0}
 --- !u!114 &3093632525657020732
 MonoBehaviour:
   m_ObjectHideFlags: 0

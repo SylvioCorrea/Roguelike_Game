@@ -12,6 +12,7 @@ public abstract class EnemyCoreScript : MonoBehaviour, IDeathNotifier
     public EnemyStateEnum state;
 
     public GameObject damageNumbersPrefab;
+    public Transform deathEffect;
 
     public List<IListener> listeners;
     
@@ -33,6 +34,9 @@ public abstract class EnemyCoreScript : MonoBehaviour, IDeathNotifier
     {
         foreach(IListener l in listeners) {
             l.Notify();
+        }
+        if(deathEffect) {
+            Instantiate(deathEffect, transform.position, Quaternion.identity);
         }
         Destroy(gameObject);
     }
