@@ -141,7 +141,7 @@ MonoBehaviour:
   target: {fileID: 0}
   lockedOn: 0
   targetLocation: {x: 0, y: 0, z: 0}
-  speed: 5
+  speed: 8
   alertDistance: 10
   targetDistance: 2.5
   attackCoolDownPreset: 2.5
@@ -158,7 +158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetLayer: 0
-  attackPower: 15
+  attackPower: 20
   attackForce: 8
   element: 0
 --- !u!95 &4028890118997950856

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MaskedOrcMovement : EnemyMovementScript
+public class MaskedOrcMovement : EnemyMovementScript, IEnemyPursuit
 {
     
     public Transform target;
@@ -83,13 +83,17 @@ public class MaskedOrcMovement : EnemyMovementScript
 
                     } else { //It's too soon to attack again
                         if(TargetIsWayTooClose()) { //Flee from target
+                            animator.SetBool("isRunning", true);
                             Vector3 speedUnitVector = (transform.position - target.position).normalized;
                             rigidBody.velocity = speedUnitVector * speed;
                             TurnIfNeeded();
                         } else if(TargetIsWayTooFar()) {
+                            animator.SetBool("isRunning", true);
                             Vector3 speedUnitVector = (target.position - transform.position).normalized;
                             rigidBody.velocity = speedUnitVector * speed;
                             TurnIfNeeded();
+                        } else {
+                            animator.SetBool("isRunning", false);
                         }
                     }
                 }
@@ -179,5 +183,10 @@ public class MaskedOrcMovement : EnemyMovementScript
         Transform instantiatedProjectile = Instantiate(projectile, transform.position + speedUnitVector * 0.5f, Quaternion.identity);
 
         instantiatedProjectile.GetComponent<Rigidbody2D>().velocity = speedUnitVector * instantiatedProjectile.GetComponent<EnemyProjectile>().speed;
+    }
+
+    public void SetAlertDistance(float n)
+    {
+        alertDistance = n;
     }
 }
