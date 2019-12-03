@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 6780856476818436062}
   - component: {fileID: 3300294477535653974}
   - component: {fileID: 4007657464458614737}
+  - component: {fileID: 8665072974832708842}
+  - component: {fileID: 8019241723971390319}
   m_Layer: 11
   m_Name: Potion
   m_TagString: Untagged
@@ -119,6 +121,41 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.088929296}
   serializedVersion: 2
   m_Radius: 0.37346065
+--- !u!95 &8665072974832708842
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289696082430111608}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 864ce0ef505c08b44b832162c04ae7be, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8019241723971390319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289696082430111608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e14ace3d8ba569459dd18eaa6dde43e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToVanish: 8
+  timeLeft: 0
+  isVanishing: 0
+  animator: {fileID: 0}
 --- !u!1 &4386595562054743284
 GameObject:
   m_ObjectHideFlags: 0
