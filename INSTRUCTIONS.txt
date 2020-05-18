@@ -5,7 +5,7 @@ Controls:
     W, A, S, D:
     Move character.
     
-    Mouse right button:
+    Mouse left button:
     Attack in the direction of mouse cursor.
     Pick up loot when cursor over the item.
     Equip weapon when cursor over inventory button
